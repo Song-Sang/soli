@@ -2,4 +2,13 @@
 
 .navMenu-container {
   display: flex;
+  align-items: center;
+
+  position: relative;
+
+  gap: 30px;
+
+  button {
+    height: 40px;
+  }
 }

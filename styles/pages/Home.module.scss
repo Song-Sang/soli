@@ -11,11 +11,12 @@
   display: flex;
   flex-direction: column;
 
-  padding: 20px;
   gap: 300px;
 
   width: 100%;
   min-width: 700px;
+
+  z-index: 999;
 }
 
 .home-images {

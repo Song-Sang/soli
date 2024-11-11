@@ -1,6 +1,5 @@
 import styles from '@/styles/pages/Home.module.scss';
 import classNames from 'classnames/bind';
-import HomeFooter from '../components/HomeFooter/HomeFooter';
 import NavBar from '../components/NavBar/NavBar';
 
 const cx = classNames.bind(styles);
