@@ -1,4 +1,4 @@
-import styles from '@/styles/pages/Home.module.scss';
+import styles from './index.module.scss';
 import classNames from 'classnames/bind';
 import NavBar from '../components/NavBar/NavBar';
 
