@@ -2,13 +2,17 @@ import Link from 'next/link';
 import NavMenu from './Menu/NavMenu';
 import styles from './NavBar.module.scss';
 import classNames from 'classnames/bind';
+import Image from 'next/image';
+import homeImg from '@/public/images/home.svg';
 
 const cx = classNames.bind(styles);
 
 export default function NavBar() {
   return (
     <nav className={cx('nav-container')}>
-      <Link href="/">홈 버튼</Link>
+      <Link href="/">
+        <Image src={homeImg} alt="메뉴아이콘" width={25} height={25} />
+      </Link>
       <NavMenu />
     </nav>
   );
