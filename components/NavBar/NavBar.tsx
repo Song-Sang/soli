@@ -11,7 +11,7 @@ export default function NavBar() {
   return (
     <nav className={cx('nav-container')}>
       <Link href="/">
-        <Image src={homeImg} alt="메뉴아이콘" width={25} height={25} />
+        <Image src={homeImg} alt="홈 아이콘" width={30} height={30} />
       </Link>
       <NavMenu />
     </nav>

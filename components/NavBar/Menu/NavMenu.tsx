@@ -27,11 +27,11 @@ export default function NavMenu() {
         >
           WORKS
         </button>
-        <Dropdown
+        {/* <Dropdown
           isOpen={isDropdownOpen}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}
-        />
+        /> */}
       </div>
       <Link href="/introduction">BIO/CV</Link>
       <Link href="/contact">CONTACT</Link>
