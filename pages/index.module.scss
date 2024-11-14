@@ -1,46 +1,74 @@
 @import '/styles/main.scss';
 
+.home-wrapper {
+  display: flex;
+
+  width: 1600px;
+
+  gap: 20px;
+
+  margin: 0 auto;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .home-container {
-  display: flex;
-
-  height: 100vh;
-  min-height: 900px;
+  width: 710px;
 }
 
-.home-content {
+.title-container {
   display: flex;
   flex-direction: column;
 
-  gap: 300px;
+  position: fixed;
 
-  width: 100%;
-  min-width: 700px;
+  width: 500px;
 
-  z-index: 999;
-}
-
-.home-images {
-  background-color: green;
-
-  min-width: 800px;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-left: 30px;
+  margin-top: 150px;
+  margin-left: 60px;
 }
 
 .sub-title {
   font-size: 25px;
+  font-weight: 100;
 }
 
 .title {
-  font-size: 70px;
+  font-size: 90px;
 }
 
-.since {
-  font-size: 15px;
+.Tertiary-title {
+  font-size: 20px;
 
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+.image-helper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.image-section-first {
+  width: 390px;
+
+  margin-right: 10px;
+  margin-top: 500px;
+}
+
+.image-sections {
+  display: flex;
+
+  gap: 30px;
+}
+
+.image-section-second {
+  position: relative;
+  top: -200px;
+}
+
+.image-section-third {
+  margin-top: 100px;
 }

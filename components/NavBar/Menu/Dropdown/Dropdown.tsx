@@ -22,13 +22,10 @@ export default function Dropdown({
       onMouseOut={onMouseOut}
     >
       <Link className={cx('dropdown-item')} href="works/stage">
-        • STAGE
+        • Stage & Costume
       </Link>
       <Link className={cx('dropdown-item')} href="works/costume">
-        • COSTUME
-      </Link>
-      <Link className={cx('dropdown-item')} href="works/performance">
-        • PERFORMANCE
+        • Artwork & Performance
       </Link>
     </div>
   );
