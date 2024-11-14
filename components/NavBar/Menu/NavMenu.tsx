@@ -19,20 +19,7 @@ export default function NavMenu() {
 
   return (
     <div className={cx('navMenu-container')}>
-      <div>
-        <button
-          className={cx('works-button')}
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-        >
-          WORKS
-        </button>
-        {/* <Dropdown
-          isOpen={isDropdownOpen}
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-        /> */}
-      </div>
+      <Link href="/works">WORKS</Link>
       <Link href="/introduction">BIO/CV</Link>
       <Link href="/contact">CONTACT</Link>
     </div>
