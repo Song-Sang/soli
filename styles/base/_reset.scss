@@ -26,6 +26,7 @@ body {
   font-style: normal;
   line-height: normal;
   background: #fff;
+  color: #fff;
   height: 100vh;
   background-color: #000;
 }
@@ -43,7 +44,10 @@ input,
 select,
 textarea {
   border: none;
-  background-color: transparent;
+  background-color: #17161b;
+  color: #fff;
+  border: 1px solid;
+  border-color: #414141;
 
   &:focus {
     outline: none;

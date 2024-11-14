@@ -8,9 +8,12 @@
 .home-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   margin: 30px 100px;
+
   width: 1800px;
+  height: 874px;
 }
 
 .title-container {
@@ -20,9 +23,6 @@
   justify-content: center;
 
   position: relative;
-
-  min-height: 780px;
-  height: 100%;
 }
 
 .sub-title {
@@ -33,10 +33,12 @@
   left: 79px;
 
   font-size: 80px;
+  font-weight: 800;
 }
 
 .title {
   font-size: 170px;
+  font-weight: 100;
 }
 
 .Tertiary-title {
@@ -53,11 +55,11 @@
   display: flex;
 
   position: absolute;
-  top: 120px;
+  top: 60px;
 
   z-index: -2;
 
-  filter: brightness(0.8);
+  filter: brightness(0.5);
 }
 
 .home-image-1 {
