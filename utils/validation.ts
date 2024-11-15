@@ -24,21 +24,21 @@ export const validateFields = (
   };
 
   if (name.trim() === '') {
-    errors.name = '* Please enter your name.';
+    errors.name = '* please enter your name.';
   }
 
   if (email.trim() === '') {
-    errors.email = '* Please enter your e-mail.';
+    errors.email = '* please enter your e-mail.';
   } else if (!isEmailValid(email)) {
-    errors.email = '* Please check your email.';
+    errors.email = '* please check your email.';
   }
 
-  if (!/^[0-9-]*$/.test(phone.trim())) {
-    errors.phone = '* Please only numbers or hyphens';
+  if (!/^[0-9- +]*$/.test(phone.trim())) {
+    errors.phone = '* please only numbers, hyphens, spaces, or plus signs';
   }
 
   if (message.trim() === '') {
-    errors.message = '* Please enter a message.';
+    errors.message = '* please enter a message.';
   }
 
   return errors;

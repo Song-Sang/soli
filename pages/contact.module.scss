@@ -17,19 +17,60 @@
 
 .contact-main {
   display: flex;
-
-  gap: 60px;
-
-  margin-top: 50px;
+  justify-content: center;
+  gap: 100px;
 
   height: 834px;
 }
 
-.contact-title {
-  font-size: 100px;
-  font-weight: 200;
+.css-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-// .contact-filed {
-//   display: flex;
-// }
+.contact-title {
+  font-size: 120px;
+  font-weight: 200;
+
+  position: relative;
+  bottom: 170px;
+  left: 115px;
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+
+  gap: 210px;
+}
+
+.information-container {
+  > h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.icon-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 999px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+}
+
+.form-section {
+  display: flex;
+  align-items: end;
+}

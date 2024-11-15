@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import styles from './InputForm.module.scss';
 import classNames from 'classnames/bind';
 import { validateFields, ValidationErrors } from '../../../utils/validation';
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { sendEmail } from '../../../utils/sendEmail';
 
@@ -113,7 +112,6 @@ export default function InputForm() {
           </div>
         </div>
       </form>
-      <ToastContainer />
     </>
   );
 }

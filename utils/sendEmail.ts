@@ -10,8 +10,8 @@ export const sendEmail = async (formElement: HTMLFormElement) => {
     await emailjs.sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, formElement, {
       publicKey: EMAIL_PUBLIC_KEY,
     });
-    toast.success('completed', { autoClose: 2000 });
+    toast.success('send message completed', { autoClose: 2000 });
   } catch (error) {
-    toast.error('failed', { autoClose: 2000 });
+    toast.error('send message failed', { autoClose: 2000 });
   }
 };
