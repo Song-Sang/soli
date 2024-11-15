@@ -1,6 +1,7 @@
 export interface ValidationErrors {
   name: string;
   email: string;
+  phone: string;
   message: string;
 }
 
@@ -12,9 +13,15 @@ const isEmailValid = (email: string): boolean => {
 export const validateFields = (
   name: string,
   email: string,
+  phone: string,
   message: string
 ): ValidationErrors => {
-  const errors: ValidationErrors = { name: '', email: '', message: '' };
+  const errors: ValidationErrors = {
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  };
 
   if (name.trim() === '') {
     errors.name = '* Please enter your name.';
@@ -24,6 +31,10 @@ export const validateFields = (
     errors.email = '* Please enter your e-mail.';
   } else if (!isEmailValid(email)) {
     errors.email = '* Please check your email.';
+  }
+
+  if (!/^[0-9-]*$/.test(phone.trim())) {
+    errors.phone = '* Please only numbers or hyphens';
   }
 
   if (message.trim() === '') {

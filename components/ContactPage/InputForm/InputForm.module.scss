@@ -1,0 +1,112 @@
+@import '/styles/main.scss';
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  background-color: #fff;
+
+  border-radius: 5px;
+
+  padding: 40px;
+
+  width: 480px;
+  height: 740px;
+
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+.form-title {
+  color: #575757;
+  text-align: end;
+
+  font-size: 16px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  align-items: center;
+
+  height: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: #000;
+}
+
+.input {
+  width: 400px;
+  height: 40px;
+
+  border-bottom: 1px solid #000;
+}
+
+.textarea {
+  width: 400px;
+  height: 150px;
+
+  margin-top: 10px;
+
+  border: 1px solid;
+
+  font-size: 16px;
+
+  resize: none;
+}
+
+.error-box {
+  color: rgb(206, 0, 0);
+}
+
+.input-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  position: relative;
+
+  width: 400px;
+  height: 120px;
+}
+
+.error {
+  color: rgb(206, 0, 0);
+  font-size: 18px;
+
+  width: 250px;
+}
+
+.button {
+  position: absolute;
+  left: 270px;
+
+  text-align: left;
+  text-indent: 30px;
+
+  background-color: #161616;
+  border: none;
+  color: #fff;
+
+  border-radius: 5px;
+
+  width: 200px;
+  height: 60px;
+
+  font-size: 18px;
+  font-weight: 100;
+}
