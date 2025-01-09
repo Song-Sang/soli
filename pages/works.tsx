@@ -1,5 +1,5 @@
 import NavBar from '../components/NavBar/NavBar';
-import MainTopic from '../components/WorksPage/MainTopic';
+import WorksMain from '../components/WorksPage/WorksMain';
 import styles from './works.module.scss';
 import classNames from 'classnames/bind';
 
@@ -12,7 +12,7 @@ export default function Works() {
         <NavBar />
       </nav>
       <div>
-        <MainTopic />
+        <WorksMain />
       </div>
     </div>
   );
