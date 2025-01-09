@@ -1,0 +1,13 @@
+@import '/styles/main.scss';
+
+.works-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 900px;
+}
+
+.nav-wrapper {
+  margin: 60px 60px;
+}
