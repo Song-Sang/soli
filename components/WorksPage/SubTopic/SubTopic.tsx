@@ -6,19 +6,30 @@ const cx = classNames.bind(styles);
 
 interface SubTopicProps {
   title: string;
+  category: string;
   description: string;
-  align?: 'start' | 'end';
+  align?: 'reverse';
 }
 
 export default function SubTopic({
   title,
+  category,
   description,
-  align = 'start',
+  align,
 }: SubTopicProps) {
   return (
     <div>
-      <Link href="/" className={cx('Topic', { [`align-${align}`]: align })}>
-        {title}
+      <Link
+        href="/"
+        className={cx('topic-wrapper', { reverse: align === 'reverse' })}
+      >
+        <h2 className={cx('title', { reverse: align === 'reverse' })}>
+          {title}
+        </h2>
+        <div className={cx('topic-details', { reverse: align === 'reverse' })}>
+          <p className={cx('category')}>{category}</p>
+          <p className={cx('description')}>{description}</p>
+        </div>
       </Link>
     </div>
   );

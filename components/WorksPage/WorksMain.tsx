@@ -29,6 +29,7 @@ export default function WorksMain() {
     infinite: false,
     slidesToScroll: 1,
     arrows: false,
+    speed: 500,
 
     afterChange: (current: number) => {
       setCurrentSlide(current);

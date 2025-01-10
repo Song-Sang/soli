@@ -1,9 +1,62 @@
 @import '/styles/main.scss';
 
-.MainTopic-wrapper {
+.mainTopic-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   height: 760px;
+
+  padding-top: 30px;
+}
+
+.mainTopic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &.reverse {
+    align-items: flex-start;
+  }
+}
+
+.mainTopic-inner {
+  font-size: 50px;
+
+  width: 100%;
+
+  padding-left: 150px;
+
+  &.reverse {
+    padding: 0 240px;
+  }
+}
+
+.style-line-1 {
+  width: 1770px;
+
+  position: relative;
+  top: -100px;
+  left: 150px;
+}
+
+.style-line-2 {
+  width: 1770px;
+
+  position: relative;
+  top: -192px;
+  left: 150px;
+}
+
+.style-line-3 {
+  width: 655px;
+
+  position: relative;
+  top: -20px;
+}
+.style-line-4 {
+  width: 655px;
+
+  position: relative;
+  top: -32px;
 }

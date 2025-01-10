@@ -3,16 +3,19 @@ export const TOPICS = {
     {
       id: 1,
       title: 'DENYING THE DRAGON',
-      description: 'Create new shape of dragons',
+      category: '[ Artwork ]',
+      description: 'Create new shape of dragons.',
     },
     {
       id: 2,
       title: 'EMBODIED',
+      category: '[ Performance ]',
       description: 'What is embodied in me?',
     },
     {
       id: 3,
       title: 'FOREST LOVE',
+      category: '[ Artwork ]',
       description: 'How and where can we connect?',
     },
   ],
@@ -20,28 +23,33 @@ export const TOPICS = {
     {
       id: 1,
       title: 'RICH FAMILY',
+      category: '[ Costume ]',
       description: 'Was macht einen tollen Sommer aus?',
     },
     {
       id: 2,
       title: 'MUSIKAL 21:58',
+      category: '[ Stage ]',
       description:
-        '21:53 - Zu früh um schlafen zu gehen, zu spät um wen anzurufen',
+        '21:53 - Zu früh um schlafen zu gehen, zu spät um wen anzurufen.',
     },
     {
       id: 3,
       title: 'HUABUN',
-      description: '"potted plant" in Korean',
+      category: '[ Costume ]',
+      description: '"potted plant" in Korean.',
     },
     {
       id: 4,
       title: 'DIGITAL NOMADS',
-      description: 'The stories of digital nomads',
+      category: '[ Stage ]',
+      description: 'The stories of digital nomads.',
     },
     {
       id: 5,
       title: 'WUW',
-      description: 'WIND UND WAND',
+      category: '[ Costume ]',
+      description: 'WIND UND WAND.',
     },
   ],
 };
