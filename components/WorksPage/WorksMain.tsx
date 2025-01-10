@@ -4,8 +4,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useRef, useState } from 'react';
-import ArtworkPerformance from './MainTopic/ArtworkPerformance/ArtworkPerformance';
-import StageCostume from './MainTopic/StageCostume/StageCostume';
+import ArtworkPerformance from './MainTopic/ArtworkPerformance';
+import StageCostume from './MainTopic/StageCostume';
 
 const cx = classNames.bind(styles);
 

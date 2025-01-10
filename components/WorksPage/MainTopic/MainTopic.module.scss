@@ -1,0 +1,9 @@
+@import '/styles/main.scss';
+
+.MainTopic-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  height: 760px;
+}
