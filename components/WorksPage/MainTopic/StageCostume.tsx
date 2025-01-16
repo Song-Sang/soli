@@ -13,8 +13,6 @@ export default function StageCostume() {
           <p className={cx('mainTopic-inner', 'reverse')}>STAGE & COSTUME</p>
         </div>
       </h1>
-      <hr className={cx('style-line-3')} />
-      <hr className={cx('style-line-4')} />
       <div>
         {TOPICS.STAGE_COSTUME.map((topic) => (
           <SubTopic

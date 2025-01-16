@@ -13,8 +13,6 @@ export default function ArtworkPerformance() {
           <p className={cx('mainTopic-inner')}>ARTWORK & PERFORMANCE</p>
         </div>
       </h1>
-      <hr className={cx('style-line-1')} />
-      <hr className={cx('style-line-2')} />
       <div>
         {TOPICS.ART_PERFORMANCE.map((topic) => (
           <SubTopic
