@@ -3,9 +3,8 @@ import classNames from 'classnames/bind';
 import NavBar from '../../../components/NavBar/NavBar';
 import { WORKS_DATA } from '../../../constant/WORKS_DATA';
 import { GetServerSidePropsContext } from 'next';
-import Image from 'next/image';
 import People from '../../../components/Title/People/People';
-import { useState } from 'react';
+import TitleImages from '../../../components/Title/Images/images';
 
 const cx = classNames.bind(styles);
 
@@ -31,10 +30,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 export default function WorkPage({ workData }: WorkPageProps) {
   const images = workData?.images || [];
 
-  const [imgRolling, setImgRolling] = useState(true);
-  const onRollingStop = () => setImgRolling(false);
-  const onRollingRun = () => setImgRolling(true);
-
   let titleWords;
 
   // 분리 필요
@@ -47,9 +42,7 @@ export default function WorkPage({ workData }: WorkPageProps) {
 
   return (
     <>
-      <nav className={cx('nav')}>
-        <NavBar />
-      </nav>
+      <NavBar />
       <div className={cx('main')}>
         <div className={cx('description-section')}>
           <h1 className={cx('title')}>
@@ -71,59 +64,8 @@ export default function WorkPage({ workData }: WorkPageProps) {
             ))}
           </div>
         </div>
-
-        <div className={cx('wrapper')}>
-          <div className={cx('slide-container')}>
-            <ul
-              className={cx('slide-wrapper')}
-              onMouseEnter={onRollingStop}
-              onMouseLeave={onRollingRun}
-            >
-              <div className={cx('slide', 'original', { stop: !imgRolling })}>
-                {images.map((image, index) => (
-                  <li
-                    key={index}
-                    className={cx({
-                      big: index % 2 === 0,
-                      small: index % 2 !== 0,
-                    })}
-                  >
-                    <Image
-                      className={cx('image')}
-                      width={1000}
-                      height={1000}
-                      src={image}
-                      alt="아"
-                    />
-                  </li>
-                ))}
-              </div>
-              <div className={cx('slide', 'clone', { stop: !imgRolling })}>
-                {images.map((image, index) => (
-                  <li
-                    key={index}
-                    className={cx({
-                      big: index % 2 === 0,
-                      small: index % 2 !== 0,
-                    })}
-                  >
-                    <Image
-                      className={cx('image')}
-                      width={1000}
-                      height={1000}
-                      src={image}
-                      alt="아"
-                    />
-                  </li>
-                ))}
-              </div>
-            </ul>
-          </div>
-        </div>
-
-        <div>
-          <People workData={workData} />
-        </div>
+        <TitleImages images={images} />
+        <People workData={workData} />
       </div>
     </>
   );
