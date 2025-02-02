@@ -9,7 +9,7 @@
 
   padding: 0 60px;
 
-  height: 120px;
+  height: 110px;
 
   &:hover {
     background-color: #000;
@@ -20,13 +20,14 @@
 .title {
   display: flex;
   align-items: center;
-  overflow: hidden;
+
+  text-transform: uppercase;
 
   position: relative;
   bottom: 5px;
 
   font-family: 'Oswald', sans-serif;
-  font-size: 130px;
+  font-size: 90px;
   font-weight: 800;
   letter-spacing: -5px;
 
@@ -41,7 +42,7 @@
   align-items: flex-end;
   justify-content: flex-end;
 
-  height: 120px;
+  height: 100px;
 
   &.reverse {
     order: 1;
