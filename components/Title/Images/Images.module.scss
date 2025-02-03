@@ -1,7 +1,8 @@
 @import '/styles/main.scss';
 
 .wrapper {
-  width: 1200px;
+  width: 1000px;
+  padding: 20px;
 
   .slide-container {
     overflow: hidden;
@@ -17,20 +18,8 @@
       position: relative;
       border-top: 1px solid #bbb;
       border-bottom: 1px solid #bbb;
-      padding: 20px 0;
+      padding: 10px 0;
 
-      &::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 2px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #d5d5d5;
-        z-index: 1;
-      }
       &.original {
         animation: 50s linear infinite normal none running infiniteAnimation1;
       }
@@ -42,7 +31,8 @@
       }
 
       li {
-        margin: 0 15px;
+        display: flex;
+        margin-left: 15px;
         cursor: pointer;
         z-index: 2;
         transition: 0.3s;
@@ -51,21 +41,14 @@
         &:hover {
           transform: scale(0.98);
           filter: grayscale(0%);
-          &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-          }
         }
 
         .image {
           width: auto;
-          height: 300px;
+          height: 250px;
+
+          border-radius: 2px;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
         }
       }
     }

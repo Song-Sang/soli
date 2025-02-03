@@ -28,13 +28,7 @@ export default function TitleImages({ images }: TitleImagesProps) {
         >
           <div className={cx('slide', 'original', { stop: !imgRolling })}>
             {images.map((image, index) => (
-              <li
-                key={index}
-                className={cx({
-                  big: index % 2 === 0,
-                  small: index % 2 !== 0,
-                })}
-              >
+              <li key={index}>
                 <Image
                   className={cx('image')}
                   width={1000}
@@ -47,13 +41,7 @@ export default function TitleImages({ images }: TitleImagesProps) {
           </div>
           <div className={cx('slide', 'clone', { stop: !imgRolling })}>
             {images.map((image, index) => (
-              <li
-                key={index}
-                className={cx({
-                  big: index % 2 === 0,
-                  small: index % 2 !== 0,
-                })}
-              >
+              <li key={index}>
                 <Image
                   className={cx('image')}
                   width={1000}
