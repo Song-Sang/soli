@@ -34,15 +34,15 @@ export const IMAGES_DATA = {
   ],
 
   DigitalNomads: [
-    `${IMAGE_URL}/DigitalNomads/DN1.jap`,
-    `${IMAGE_URL}/DigitalNomads/DN2.jap`,
-    `${IMAGE_URL}/DigitalNomads/DN3.jap`,
-    `${IMAGE_URL}/DigitalNomads/DN4.jap`,
-    `${IMAGE_URL}/DigitalNomads/DN5.jap`,
-    `${IMAGE_URL}/DigitalNomads/DN6.jap`,
-    `${IMAGE_URL}/DigitalNomads/DN7.jap`,
-    `${IMAGE_URL}/DigitalNomads/DN8.jap`,
-    `${IMAGE_URL}/DigitalNomads/DN9.jap`,
+    `${IMAGE_URL}/DigitalNomads/DN1.jpg`,
+    `${IMAGE_URL}/DigitalNomads/DN2.jpg`,
+    `${IMAGE_URL}/DigitalNomads/DN3.jpg`,
+    `${IMAGE_URL}/DigitalNomads/DN4.jpg`,
+    `${IMAGE_URL}/DigitalNomads/DN5.jpg`,
+    `${IMAGE_URL}/DigitalNomads/DN6.jpg`,
+    `${IMAGE_URL}/DigitalNomads/DN7.jpg`,
+    `${IMAGE_URL}/DigitalNomads/DN8.jpg`,
+    `${IMAGE_URL}/DigitalNomads/DN9.jpg`,
   ],
 
   Huabun: [
