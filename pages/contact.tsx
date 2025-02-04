@@ -3,8 +3,8 @@ import classNames from 'classnames/bind';
 import NavBar from '../components/NavBar/NavBar';
 import InputForm from '../components/ContactPage/InputForm/InputForm';
 import Image from 'next/image';
-import urlImg from '@/public/images/url.svg';
-import instagramImg from '@/public/images/instagram.svg';
+import urlImg from '@/public/images/icon/url.svg';
+import instagramImg from '@/public/images/icon/instagram.svg';
 import { copyURL } from '../utils/copyURL';
 
 const cx = classNames.bind(styles);

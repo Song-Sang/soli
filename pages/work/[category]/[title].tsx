@@ -6,7 +6,7 @@ import { GetServerSidePropsContext } from 'next';
 import People from '../../../components/Title/People/People';
 import TitleImages from '../../../components/Title/Images/Images';
 import Lottie from 'react-lottie-player';
-import circleLottie from '@/public/images/circle-animation .json';
+import circleLottie from '@/public/lottie/circle-animation .json';
 import TopScrollButton from '../../../components/TopScrollButton/TopScrollButton';
 import { copyURL } from '@/utils/copyURL';
 

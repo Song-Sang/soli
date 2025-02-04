@@ -3,7 +3,7 @@ import NavMenu from './Menu/NavMenu';
 import styles from './NavBar.module.scss';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
-import homeImg from '@/public/images/home.svg';
+import homeImg from '@/public/images/icon/home.svg';
 
 const cx = classNames.bind(styles);
 

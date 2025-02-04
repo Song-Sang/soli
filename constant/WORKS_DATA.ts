@@ -1,3 +1,5 @@
+import { IMAGES_DATA } from './IMAGES_DATA';
+
 export const WORKS_DATA: WORKS_DATA = {
   artwork: [
     {
@@ -17,11 +19,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'Universität der Künste Berlin, Berlin',
         },
       ],
-      images: Array.from(
-        { length: 6 },
-        (_, index) =>
-          `/images/Artwork&Performance/Embodied/Embodied${index + 1}.JPG`
-      ),
+      images: IMAGES_DATA.Embodied,
     },
   ],
 
@@ -50,11 +48,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'Ballhaus Ost, Berlin',
         },
       ],
-      images: Array.from(
-        { length: 8 },
-        (_, index) =>
-          `/images/Artwork&Performance/DenyingTheDragon/DTD${index + 1}.JPG`
-      ),
+      images: IMAGES_DATA.DenyingTheDragon,
     },
     {
       title: 'Embodied',
@@ -73,16 +67,12 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'Universität der Künste Berlin, Berlin',
         },
       ],
-      images: Array.from(
-        { length: 6 },
-        (_, index) =>
-          `/images/Artwork&Performance/Embodied/Embodied${index + 1}.JPG`
-      ),
+      images: IMAGES_DATA.Embodied,
     },
     {
       title: 'Forest love : Meeting once',
       summary: 'How and where can we connect?',
-      category: 'stage, performance',
+      category: 'performance',
       content: [
         'Part of the Room to expand Festival - UdK. A performance about the process of creating connections between human and non-human beings.',
       ],
@@ -109,6 +99,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'Uferstudios, Berlin',
         },
       ],
+      images: IMAGES_DATA.ForestLove,
     },
   ],
 
@@ -116,7 +107,7 @@ export const WORKS_DATA: WORKS_DATA = {
     {
       title: 'Forest love : Meeting once',
       summary: 'How and where can we connect?',
-      category: 'stage, performance',
+      category: 'stage',
       content: [
         'Part of the Room to expand Festival - UdK.',
         'A performance about the process of creating connections between human and non-human beings.',
@@ -144,6 +135,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'Uferstudios, Berlin',
         },
       ],
+      images: IMAGES_DATA.ForestLove,
     },
     {
       title: 'Digital Nomads',
@@ -174,6 +166,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'Hans Eisler Studio Saal, Berlin',
         },
       ],
+      images: IMAGES_DATA.DigitalNomads,
     },
     {
       title: 'Musical 21:58',
@@ -216,6 +209,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'UNI.T Theater, Berlin',
         },
       ],
+      images: IMAGES_DATA['Musical 21:58'],
     },
     {
       title: 'The Rich Family',
@@ -262,6 +256,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'Berlin, Deutschland',
         },
       ],
+      images: IMAGES_DATA.RichFamily,
     },
     {
       title: 'WUW',
@@ -344,6 +339,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'HochX theater, Munich',
         },
       ],
+      images: IMAGES_DATA.Huabun,
     },
     {
       title: 'WUW',

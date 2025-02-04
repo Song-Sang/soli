@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './TopScrollButton.module.scss';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
-import arrow from '@/public/images/arrow.svg';
+import arrow from '@/public/images/icon/arrow.svg';
 
 const cx = classNames.bind(styles);
 

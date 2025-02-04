@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import styles from './People.module.scss';
 import classNames from 'classnames/bind';
-import urlImg from '@/public/images/url.svg';
-import instagramImg from '@/public/images/instagram.svg';
-import email from '@/public/images/email.svg';
+import urlImg from '@/public/images/icon/url.svg';
+import instagramImg from '@/public/images/icon/instagram.svg';
+import email from '@/public/images/icon/email.svg';
 import Link from 'next/link';
 
 const cx = classNames.bind(styles);

@@ -3,7 +3,7 @@ import styles from './Images.module.scss';
 import classNames from 'classnames/bind';
 import { useState } from 'react';
 import Lottie from 'react-lottie-player';
-import lineLottie from '@/public/images/line-animation.json';
+import lineLottie from '@/public/lottie/line-animation.json';
 
 const cx = classNames.bind(styles);
 
