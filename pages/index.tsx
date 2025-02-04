@@ -3,9 +3,9 @@ import classNames from 'classnames/bind';
 import Image from 'next/image';
 import NavBar from '../components/NavBar/NavBar';
 
-import homeImg_1 from '@/public/images/Stage&Costume/Musikal21:58/Musikal7.jpeg';
-import homeImg_2 from '@/public/images/Artwork&Performance/Embodied/Embodied3.jpg';
-import homeImg_3 from '@/public/images/Artwork&Performance/DenyingTheDragon/DTD2.jpg';
+import homeImg_1 from '@/public/images/title/Musikal21:58/Musikal7.jpeg';
+import homeImg_2 from '@/public/images/title/Embodied/Embodied3.jpg';
+import homeImg_3 from '@/public/images/title/DenyingTheDragon/DTD2.jpg';
 
 const cx = classNames.bind(styles);
 
