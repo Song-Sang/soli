@@ -2,6 +2,8 @@ import Image from 'next/image';
 import styles from './Images.module.scss';
 import classNames from 'classnames/bind';
 import { useState } from 'react';
+import Lottie from 'react-lottie-player';
+import lineLottie from '@/public/images/line-animation.json';
 
 const cx = classNames.bind(styles);
 
@@ -31,10 +33,11 @@ export default function TitleImages({ images }: TitleImagesProps) {
               <li key={index}>
                 <Image
                   className={cx('image')}
-                  width={1000}
-                  height={1000}
+                  width={800}
+                  height={800}
                   src={image}
                   alt="아"
+                  priority
                 />
               </li>
             ))}
@@ -44,15 +47,23 @@ export default function TitleImages({ images }: TitleImagesProps) {
               <li key={index}>
                 <Image
                   className={cx('image')}
-                  width={1000}
-                  height={1000}
+                  width={800}
+                  height={800}
                   src={image}
                   alt="아"
+                  priority
                 />
               </li>
             ))}
           </div>
         </ul>
+        <Lottie
+          loop
+          animationData={lineLottie}
+          play
+          className={cx('line-lottie')}
+          speed={0.3}
+        />
       </div>
     </div>
   );

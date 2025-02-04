@@ -6,7 +6,6 @@ import Image from 'next/image';
 import urlImg from '@/public/images/url.svg';
 import instagramImg from '@/public/images/instagram.svg';
 import { copyURL } from '../utils/copyURL';
-import { ToastContainer } from 'react-toastify';
 
 const cx = classNames.bind(styles);
 
@@ -27,9 +26,9 @@ export default function Contact() {
                 <p>+82 010 5663 3520</p>
               </div>
               <div className={cx('icon-wrapper')}>
-                <div className={cx('icon-container')} onClick={copyURL}>
+                <button className={cx('icon-container')} onClick={copyURL}>
                   <Image src={urlImg} alt="url 아이콘" width={30} height={30} />
-                </div>
+                </button>
                 <a
                   href="https://www.instagram.com/sol_2_jang"
                   target="_blank"
@@ -52,7 +51,6 @@ export default function Contact() {
           </section>
         </main>
       </div>
-      <ToastContainer />
     </div>
   );
 }

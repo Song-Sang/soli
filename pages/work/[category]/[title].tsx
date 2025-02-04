@@ -4,7 +4,11 @@ import NavBar from '../../../components/NavBar/NavBar';
 import { WORKS_DATA } from '../../../constant/WORKS_DATA';
 import { GetServerSidePropsContext } from 'next';
 import People from '../../../components/Title/People/People';
-import TitleImages from '../../../components/Title/Images/images';
+import TitleImages from '../../../components/Title/Images/Images';
+import Lottie from 'react-lottie-player';
+import circleLottie from '@/public/images/circle-animation .json';
+import TopScrollButton from '../../../components/TopScrollButton/TopScrollButton';
+import { copyURL } from '@/utils/copyURL';
 
 const cx = classNames.bind(styles);
 
@@ -41,8 +45,9 @@ export default function WorkPage({ workData }: WorkPageProps) {
   }
 
   return (
-    <>
+    <div>
       <NavBar />
+
       <div className={cx('main')}>
         <div className={cx('description-section')}>
           <h1 className={cx('title')}>
@@ -51,6 +56,12 @@ export default function WorkPage({ workData }: WorkPageProps) {
                 {word}
               </p>
             ))}
+            <Lottie
+              loop
+              animationData={circleLottie}
+              play
+              className={cx('circle-lottie')}
+            />
           </h1>
           <div className={cx('category-summary-container')}>
             <h2 className={cx('category')}>{workData?.category}</h2>
@@ -65,8 +76,14 @@ export default function WorkPage({ workData }: WorkPageProps) {
           </div>
         </div>
         <TitleImages images={images} />
-        <People workData={workData} />
+        <People workData={workData} onClick={copyURL} />
+        <footer className={cx('footer')}>
+          <p>BASED IN BERLIN, GERMANY</p>
+          <p className={cx('year')}>@2023 - 2025</p>
+        </footer>
       </div>
-    </>
+
+      <TopScrollButton />
+    </div>
   );
 }
