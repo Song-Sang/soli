@@ -2,14 +2,15 @@
 
 .topic-wrapper {
   display: flex;
-  &.reverse {
-    justify-content: flex-end;
-  }
   gap: 30px;
 
   padding: 0 60px;
 
   height: 110px;
+
+  &.reverse {
+    justify-content: flex-end;
+  }
 
   &:hover {
     background-color: #000;
