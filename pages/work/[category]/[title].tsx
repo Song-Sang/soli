@@ -9,6 +9,9 @@ import Lottie from 'react-lottie-player';
 import circleLottie from '@/public/lottie/circle-animation .json';
 import TopScrollButton from '../../../components/TopScrollButton/TopScrollButton';
 import { copyURL } from '@/utils/copyURL';
+import Modal from '../../../components/Modal/Modal';
+import useModalStore from '../../../store/useModalStore';
+import { useEffect } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -32,7 +35,21 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 }
 
 export default function WorkPage({ workData }: WorkPageProps) {
+  const { isOpen, closeModal, imageSrc } = useModalStore();
+
   const images = workData?.images || [];
+
+  //모달 스크롤방지
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
 
   let titleWords;
 
@@ -82,7 +99,15 @@ export default function WorkPage({ workData }: WorkPageProps) {
           <p className={cx('year')}>@2023 - 2025</p>
         </footer>
       </div>
-
+      {isOpen && (
+        <div className={cx('modal')}>
+          <Modal
+            isOpen={isOpen}
+            onClose={closeModal}
+            imageSrc={imageSrc || ''}
+          />
+        </div>
+      )}
       <TopScrollButton />
     </div>
   );

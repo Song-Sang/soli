@@ -17,7 +17,7 @@
       flex-wrap: nowrap;
       position: relative;
       border-top: 1px solid #bbb;
-      padding: 10px 0;
+      padding: 20px 0;
 
       &.original {
         animation: 50s linear infinite normal none running infiniteAnimation1;
@@ -60,7 +60,7 @@
   z-index: -999;
 
   position: absolute;
-  top: 882px;
+  top: 865px;
 }
 
 @keyframes infiniteAnimation1 {

@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import styles from './Images.module.scss';
 import classNames from 'classnames/bind';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Lottie from 'react-lottie-player';
 import lineLottie from '@/public/lottie/line-animation.json';
+import useModalStore from '../../../store/useModalStore';
 
 const cx = classNames.bind(styles);
 
@@ -12,7 +13,9 @@ interface TitleImagesProps {
 }
 
 export default function TitleImages({ images }: TitleImagesProps) {
+  const { isOpen, openModal } = useModalStore();
   const [imgRolling, setImgRolling] = useState(true);
+
   const onRollingStop = () => setImgRolling(false);
   const onRollingRun = () => setImgRolling(true);
 
@@ -28,9 +31,11 @@ export default function TitleImages({ images }: TitleImagesProps) {
           onMouseEnter={onRollingStop}
           onMouseLeave={onRollingRun}
         >
-          <div className={cx('slide', 'original', { stop: !imgRolling })}>
+          <div
+            className={cx('slide', 'original', { stop: isOpen || !imgRolling })}
+          >
             {images.map((image, index) => (
-              <li key={index}>
+              <li key={index} onClick={() => openModal(image)}>
                 <Image
                   className={cx('image')}
                   width={800}
@@ -42,9 +47,11 @@ export default function TitleImages({ images }: TitleImagesProps) {
               </li>
             ))}
           </div>
-          <div className={cx('slide', 'clone', { stop: !imgRolling })}>
+          <div
+            className={cx('slide', 'clone', { stop: isOpen || !imgRolling })}
+          >
             {images.map((image, index) => (
-              <li key={index}>
+              <li key={index} onClick={() => openModal(image)}>
                 <Image
                   className={cx('image')}
                   width={800}
