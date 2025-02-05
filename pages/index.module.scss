@@ -1,93 +1,116 @@
 @import '/styles/main.scss';
 
 .home-wrapper {
+  height: 934px;
+
   display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
   justify-content: center;
+
+  margin: 25px 50px;
+
+  height: 30px;
+}
+
+.nav-title {
+  font-family: 'Major Mono Display';
+  font-size: 20px;
 }
 
 .home-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 
-  margin: 60px 60px;
-
-  width: 1800px;
-  height: 814px;
+  height: 855px;
 }
 
-.title-container {
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  position: relative;
+  height: 100%;
 }
 
-.sub-title {
-  display: inline-block;
-
-  position: relative;
-  top: 125px;
-  left: 79px;
-
-  font-size: 80px;
-  font-weight: 800;
-}
-
-.title {
-  font-size: 170px;
-  font-weight: 100;
-}
-
-.Tertiary-title {
-  display: inline-block;
-
-  position: relative;
-  bottom: 10px;
-  left: 800px;
-
-  font-size: 40px;
-}
-
-.home-image-container {
+.home-title-wrapper {
   display: flex;
+  justify-content: center;
+}
 
+.home-title {
+  font-family: 'Cormorant Garamond';
+  font-size: 120px;
+  font-weight: 500;
+  font-weight: 200;
+}
+
+.button {
+  background-color: #fcfaf800;
+  font-size: 120px;
+  font-weight: 500;
+
+  line-height: 110px;
+  letter-spacing: -8px;
+
+  &.menu {
+    font-family: 'Host Grotesk';
+    font-weight: 400;
+
+    &:hover {
+      transition: 0.6s;
+      font-weight: 500;
+    }
+
+    &.gallery {
+      pointer-events: none;
+      opacity: 0.2;
+    }
+  }
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+}
+
+.circle {
   position: absolute;
-  top: 60px;
+  top: 200px;
 
-  z-index: -2;
+  width: 400px;
+  height: 90px;
 
-  filter: brightness(0.5);
+  z-index: 2;
 }
 
-.home-image-1 {
-  position: relative;
-  top: 15px;
-  left: 80px;
-
-  transform: rotate(-10deg);
-  box-shadow: -1px -1px 10px rgba(69, 69, 69, 0.5);
-}
-
-.home-image-3 {
-  position: relative;
-  top: 15px;
-  right: 80px;
-
-  transform: rotate(10deg);
-  box-shadow: 1px -1px 10px rgba(69, 69, 69, 0.5);
+.line-lottie {
+  position: absolute;
+  width: 600px;
 
   z-index: -1;
+
+  top: 90px;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  justify-content: center;
+  gap: 30px;
 
-.footer-center {
-  text-align: center;
+  padding: 30px 50px;
 }

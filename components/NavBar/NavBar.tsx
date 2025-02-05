@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 export default function NavBar() {
   return (
     <nav className={cx('nav-container')}>
-      <Link href="/">
+      <Link href="/" className={cx('home-icon')}>
         <Image src={homeImg} alt="홈 아이콘" width={30} height={30} />
       </Link>
       <NavMenu />

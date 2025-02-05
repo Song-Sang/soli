@@ -11,7 +11,6 @@ export default function ArtworkPerformance() {
 
   const combinedWorksData: WORKS_DATA_INNER[] = [...performance, ...artwork];
   const artworkPerformanceData = editWorksData(combinedWorksData);
-  console.log(artworkPerformanceData);
 
   return (
     <div className={cx('mainTopic-wrapper')}>

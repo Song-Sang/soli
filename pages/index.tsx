@@ -1,58 +1,80 @@
 import styles from './index.module.scss';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
-import NavBar from '../components/NavBar/NavBar';
-
-import homeImg_1 from '@/public/images/title/Musikal21:58/Musikal7.jpeg';
-import homeImg_2 from '@/public/images/title/Embodied/Embodied3.jpg';
-import homeImg_3 from '@/public/images/title/DenyingTheDragon/DTD2.jpg';
+import homeCircle from '@/public/images/home-circle.png';
+import Lottie from 'react-lottie-player';
+import LineLottie from '@/public/lottie/home-line-animation.json';
+import { useState } from 'react';
+import Link from 'next/link';
 
 const cx = classNames.bind(styles);
 
 export default function Home() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isStopped, setIsStopped] = useState(false);
+
+  const handleMouseEnter = (index: any) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+    setIsStopped(false);
+  };
+
+  const menuItems = [
+    { label: 'PROJECTS', path: '/works', className: 'projects' },
+    { label: 'CONTACT', path: '/contact', className: 'contact' },
+    { label: 'ABOUT', path: '/introduction', className: 'about' },
+    { label: 'GALLERY', path: '/gallery', className: 'gallery' },
+  ];
+
   return (
     <div className={cx('home-wrapper')}>
-      <main className={cx('home-container')}>
-        <NavBar />
-        <div className={cx('title-container')}>
-          <div className={cx('home-image-container')}>
+      <nav className={cx('nav')}>
+        <p className={cx('nav-title')}>poRtfolio</p>
+      </nav>
+      <div className={cx('home-container')}>
+        <main className={cx('main-container')}>
+          <div className={cx('home-title-wrapper')}>
+            <h1 className={cx('home-title')}>HOME</h1>
             <Image
-              className={cx('home-image-1')}
-              src={homeImg_1}
-              alt="홈 이미지"
-              width={220}
-              height={310}
-            />
-            <Image
-              className={cx('home-image-2')}
-              src={homeImg_2}
-              alt="홈 이미지"
-              width={220}
-              height={310}
-            />
-            <Image
-              className={cx('home-image-3')}
-              src={homeImg_3}
-              alt="홈 이미지"
-              width={220}
-              height={310}
+              src={homeCircle}
+              width={800}
+              height={800}
+              alt="동그라미"
+              className={cx('circle')}
             />
           </div>
-          <div>
-            <p className={cx('sub-title')}>Scenographer</p>
-            <h1 className={cx('title')}>SOLI - JANG</h1>
-            <p className={cx('Tertiary-title')}>WORKS ‣</p>
+          <div className={cx('button-container')}>
+            {menuItems.map((item, index) => (
+              <div key={index} className={cx('menu-wrapper')}>
+                <Link
+                  href={item.path}
+                  className={cx('button', 'menu', item.className)}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {item.label}
+                </Link>
+                {hoveredIndex === index && (
+                  <Lottie
+                    play={!isStopped}
+                    loop={false}
+                    animationData={LineLottie}
+                    className={cx('line-lottie')}
+                    onComplete={() => setIsStopped(true)}
+                  />
+                )}
+              </div>
+            ))}
           </div>
-        </div>
+        </main>
         <footer className={cx('footer-container')}>
-          <div className={cx('footer-left')}>Soli-Jang</div>
-          <div className={cx('footer-center')}>
-            <p>SCENOGRAPHER</p>
-            <p>BASED IN BERLIN, GERMANY</p>
-          </div>
-          <div className={cx('footer-right')}>@2023 - 2025</div>
+          <p className={cx('title2')}>BASED IN BERLIN, GERMANY</p>
+          <p className={cx('title4')}>@2023-2025 </p>
         </footer>
-      </main>
+      </div>
     </div>
   );
 }

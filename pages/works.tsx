@@ -8,9 +8,7 @@ const cx = classNames.bind(styles);
 export default function Works() {
   return (
     <div className={cx('works-wrapper')}>
-      <nav className={cx('nav-wrapper')}>
-        <NavBar />
-      </nav>
+      <NavBar />
       <div>
         <WorksMain />
       </div>

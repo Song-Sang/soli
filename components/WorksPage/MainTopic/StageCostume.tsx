@@ -11,7 +11,6 @@ export default function StageCostume() {
 
   const combinedWorksData: WORKS_DATA_INNER[] = [...costume, ...stage];
   const stageCostumeData = editWorksData(combinedWorksData);
-  console.log(stageCostumeData);
 
   return (
     <div className={cx('mainTopic-wrapper')}>
