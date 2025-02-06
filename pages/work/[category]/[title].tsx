@@ -35,9 +35,17 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 }
 
 export default function WorkPage({ workData }: WorkPageProps) {
-  const { isOpen, closeModal, imageSrc } = useModalStore();
-
   const images = workData?.images || [];
+
+  const { isOpen, closeModal } = useModalStore();
+  const resetModal = useModalStore((state) => state.reset);
+
+  // 컴포넌트가 언마운트될 때 상태 초기화
+  useEffect(() => {
+    return () => {
+      resetModal();
+    };
+  }, [resetModal]);
 
   //모달 스크롤방지
   useEffect(() => {
@@ -101,11 +109,7 @@ export default function WorkPage({ workData }: WorkPageProps) {
       </div>
       {isOpen && (
         <div className={cx('modal')}>
-          <Modal
-            isOpen={isOpen}
-            onClose={closeModal}
-            imageSrc={imageSrc || ''}
-          />
+          <Modal isOpen={isOpen} onClose={closeModal} images={images} />
         </div>
       )}
       <TopScrollButton />

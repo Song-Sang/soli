@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './Images.module.scss';
 import classNames from 'classnames/bind';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Lottie from 'react-lottie-player';
 import lineLottie from '@/public/lottie/line-animation.json';
 import useModalStore from '../../../store/useModalStore';
@@ -35,11 +35,11 @@ export default function TitleImages({ images }: TitleImagesProps) {
             className={cx('slide', 'original', { stop: isOpen || !imgRolling })}
           >
             {images.map((image, index) => (
-              <li key={index} onClick={() => openModal(image)}>
+              <li key={index} onClick={() => openModal(index)}>
                 <Image
                   className={cx('image')}
-                  width={800}
-                  height={800}
+                  width={1200}
+                  height={1200}
                   src={image}
                   alt="아"
                   priority
@@ -51,11 +51,11 @@ export default function TitleImages({ images }: TitleImagesProps) {
             className={cx('slide', 'clone', { stop: isOpen || !imgRolling })}
           >
             {images.map((image, index) => (
-              <li key={index} onClick={() => openModal(image)}>
+              <li key={index} onClick={() => openModal(index)}>
                 <Image
                   className={cx('image')}
-                  width={800}
-                  height={800}
+                  width={1200}
+                  height={1200}
                   src={image}
                   alt="아"
                   priority
