@@ -6,17 +6,41 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useRef, useState } from 'react';
 import ArtworkPerformance from './MainTopic/ArtworkPerformance';
 import StageCostume from './MainTopic/StageCostume';
+import Image from 'next/image';
+import arrowImg from '@/public/images/icon/arrow.svg';
 
 const cx = classNames.bind(styles);
 
 function NextArrow(props: any) {
   const { onClick } = props;
-  return <div onClick={onClick}>Stage & Costume ▶︎</div>;
+  return (
+    <button onClick={onClick} className={cx('arrow-button')}>
+      other category
+      <Image
+        src={arrowImg}
+        alt="화살표"
+        width={20}
+        height={20}
+        className={cx('arrowImg')}
+      />
+    </button>
+  );
 }
 
 function PrevArrow(props: any) {
   const { onClick } = props;
-  return <div onClick={onClick}>◀︎ Artwork & Performance</div>;
+  return (
+    <button onClick={onClick} className={cx('arrow-button')}>
+      <Image
+        src={arrowImg}
+        alt="화살표"
+        width={20}
+        height={20}
+        className={cx('arrowImg', 'reverse')}
+      />
+      other category
+    </button>
+  );
 }
 
 export default function WorksMain() {
@@ -29,12 +53,13 @@ export default function WorksMain() {
     infinite: false,
     slidesToScroll: 1,
     arrows: false,
-    speed: 500,
+    speed: 2000,
 
     afterChange: (current: number) => {
       setCurrentSlide(current);
     },
   };
+  console.log(currentSlide);
 
   return (
     <main className={cx('worksMain-wrapper')}>

@@ -6,28 +6,48 @@
   justify-content: space-between;
 
   height: 760px;
-
-  padding-top: 30px;
 }
 
 .mainTopic-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: flex-end;
+
+  position: relative;
 
   &.reverse {
-    align-items: flex-start;
+    justify-content: flex-start;
   }
 }
 
-.mainTopic-inner {
-  font-size: 50px;
+.title {
+  font-family: 'schoolBell';
+  font-size: 40px;
 
-  width: 100%;
-
-  padding-left: 150px;
+  padding: 40px 150px 20px 20px;
 
   &.reverse {
-    padding: 0 240px;
+    padding: 40px 20px 20px 150px;
+  }
+}
+
+.circle {
+  position: absolute;
+
+  height: 90px;
+
+  z-index: 2;
+
+  &.right {
+    top: 20px;
+    right: 110px;
+
+    width: 450px;
+  }
+
+  &.left {
+    top: 20px;
+    left: 120px;
+
+    width: 320px;
   }
 }

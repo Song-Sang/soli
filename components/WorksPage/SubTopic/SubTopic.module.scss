@@ -6,7 +6,7 @@
 
   padding: 0 60px;
 
-  height: 110px;
+  height: 100px;
 
   &.reverse {
     justify-content: flex-end;
@@ -28,8 +28,8 @@
   bottom: 5px;
 
   font-family: 'Oswald', sans-serif;
-  font-size: 90px;
-  font-weight: 800;
+  font-size: 100px;
+  font-weight: 700;
   letter-spacing: -5px;
 
   &.reverse {
@@ -45,6 +45,8 @@
 
   height: 100px;
 
+  padding-bottom: 10px;
+
   &.reverse {
     order: 1;
     align-items: flex-start;
@@ -52,10 +54,14 @@
 }
 
 .category {
-  font-size: 24px;
-  height: 35px;
+  font-family: 'Oswald';
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .description {
+  font-family: 'Oswald';
   font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
