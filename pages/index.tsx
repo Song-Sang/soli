@@ -23,20 +23,20 @@ export default function Home() {
   };
 
   const menuItems = [
-    { label: 'PROJECTS', path: '/works', className: 'projects' },
+    { label: 'PROJECTS', path: '/projects', className: 'projects' },
     { label: 'CONTACT', path: '/contact', className: 'contact' },
-    { label: 'ABOUT', path: '/introduction', className: 'about' },
+    { label: 'ABOUT', path: '/about', className: 'about' },
     { label: 'GALLERY', path: '/gallery', className: 'gallery' },
   ];
 
   return (
     <div className={cx('home-wrapper')}>
       <nav className={cx('nav')}>
-        <p className={cx('nav-title')}>
+        <div className={cx('nav-title')}>
           <p>scenoGRApHeR</p>
           <p>•</p>
           <p>poRtfolio</p>
-        </p>
+        </div>
       </nav>
       <div className={cx('home-container')}>
         <main className={cx('main-container')}>

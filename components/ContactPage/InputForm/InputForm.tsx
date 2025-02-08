@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import styles from './InputForm.module.scss';
 import classNames from 'classnames/bind';
 import { validateFields, ValidationErrors } from '../../../utils/validation';
-import 'react-toastify/dist/ReactToastify.css';
 import { sendEmail } from '../../../utils/sendEmail';
 
 const cx = classNames.bind(styles);
@@ -47,7 +46,7 @@ export default function InputForm() {
           <div className={cx('input-wrapper')}>
             <div className={cx('input-container')}>
               <label className={cx('label', { 'error-box': errors.name })}>
-                Name *
+                name*
               </label>
               <input
                 className={cx('input')}
@@ -60,7 +59,7 @@ export default function InputForm() {
             </div>
             <div className={cx('input-container')}>
               <label className={cx('label', { 'error-box': errors.email })}>
-                E-mail *
+                e-mail*
               </label>
               <input
                 className={cx('input')}
@@ -73,7 +72,7 @@ export default function InputForm() {
             </div>
             <div className={cx('input-container')}>
               <label className={cx('label', { 'error-box': errors.phone })}>
-                Phone
+                phone
               </label>
               <input
                 className={cx('input')}
@@ -86,7 +85,7 @@ export default function InputForm() {
             </div>
             <div className={cx('input-container', 'textarea-container')}>
               <label className={cx('label', { 'error-box': errors.message })}>
-                Message *
+                message*
               </label>
               <textarea
                 className={cx('textarea')}
@@ -98,6 +97,9 @@ export default function InputForm() {
             </div>
           </div>
           <div className={cx('input-footer')}>
+            <button className={cx('button')} type="submit">
+              SEND
+            </button>
             <div>
               {errors.name && <p className={cx('error')}>{errors.name}</p>}
               {errors.email && <p className={cx('error')}>{errors.email}</p>}
@@ -106,9 +108,6 @@ export default function InputForm() {
                 <p className={cx('error')}>{errors.message}</p>
               )}
             </div>
-            <button className={cx('button')} type="submit">
-              SEND MESSAGE
-            </button>
           </div>
         </div>
       </form>

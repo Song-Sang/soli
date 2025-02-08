@@ -20,7 +20,7 @@ export default function SubTopic({
   return (
     <div>
       <Link
-        href={`/work/${category}/${title}`}
+        href={`/projects/${category}/${title}`}
         className={cx('topic-wrapper', { reverse: align === 'reverse' })}
       >
         <h2 className={cx('title', { reverse: align === 'reverse' })}>

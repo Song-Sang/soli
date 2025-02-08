@@ -1,6 +1,6 @@
 import NavBar from '../components/NavBar/NavBar';
 import WorksMain from '../components/WorksPage/WorksMain';
-import styles from './works.module.scss';
+import styles from './projects.module.scss';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);

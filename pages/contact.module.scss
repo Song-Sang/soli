@@ -1,53 +1,61 @@
 @import '/styles/main.scss';
 
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
 .contact-container {
   display: flex;
   flex-direction: column;
 
-  margin: 30px 100px;
-
-  width: 1800px;
-  height: 874px;
+  height: 934px;
 }
 
 .contact-main {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  align-items: center;
+  gap: 250px;
 
-  height: 834px;
+  height: 859px;
+
+  padding: 50px;
 }
 
 .css-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
+
+  height: 715px;
 }
 
 .contact-title {
-  font-size: 120px;
-  font-weight: 200;
+  font-family: 'schoolBell';
+  font-size: 100px;
+  font-weight: 700;
 
-  position: relative;
-  bottom: 170px;
-  left: 115px;
+  margin-top: 50px;
 }
 
 .contact-information {
   display: flex;
   flex-direction: column;
 
-  gap: 210px;
+  gap: 50px;
 }
 
 .information-container {
-  > h2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+
+  h2 {
+    font-family: 'Major Mono display';
+    font-size: 22px;
+
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-family: 'schoolBell';
+    font-size: 20px;
+
+    height: 30px;
   }
 }
 
@@ -61,16 +69,18 @@
   align-items: center;
   justify-content: center;
 
+  cursor: pointer;
+
   background-color: #fff;
 
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
 
-  border-radius: 999px;
-  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .form-section {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }

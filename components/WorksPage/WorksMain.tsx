@@ -59,7 +59,6 @@ export default function WorksMain() {
       setCurrentSlide(current);
     },
   };
-  console.log(currentSlide);
 
   return (
     <main className={cx('worksMain-wrapper')}>
