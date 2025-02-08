@@ -2,14 +2,36 @@
 
 .navMenu-container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 
-  position: relative;
+  width: 350px;
+}
 
-  gap: 30px;
+.menu {
+  display: flex;
+  justify-content: center;
 
-  a {
-    font-family: 'Major Mono Display';
+  font-family: 'Major Mono Display';
+  font-size: 18px;
+
+  width: 110px;
+
+  &:hover {
+    font-size: 20px;
+  }
+}
+
+.highlight {
+  &:hover {
     font-size: 18px;
   }
+}
+
+.line-lottie {
+  position: absolute;
+  top: 38px;
+
+  width: 120px;
+  height: auto;
 }
