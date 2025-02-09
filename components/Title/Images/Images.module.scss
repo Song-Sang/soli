@@ -4,6 +4,8 @@
   width: 1000px;
   padding: 20px;
 
+  position: relative;
+
   .slide-container {
     overflow: hidden;
 
@@ -60,7 +62,7 @@
   z-index: -999;
 
   position: absolute;
-  top: 865px;
+  top: 45px;
 }
 
 @keyframes infiniteAnimation1 {

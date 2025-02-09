@@ -70,4 +70,17 @@ export const IMAGES_DATA = {
     `${IMAGE_URL}/RichFamily/RichFamily6.jpg`,
     `${IMAGE_URL}/RichFamily/RichFamily7.jpg`,
   ],
+
+  WUW: [
+    `${IMAGE_URL}/WUW/WUW1.jpg`,
+    `${IMAGE_URL}/WUW/WUW2.jpg`,
+    `${IMAGE_URL}/WUW/WUW3.jpg`,
+    `${IMAGE_URL}/WUW/WUW4.jpg`,
+    `${IMAGE_URL}/WUW/WUW5.jpg`,
+    `${IMAGE_URL}/WUW/WUW6.jpg`,
+    `${IMAGE_URL}/WUW/WUW7.jpg`,
+    `${IMAGE_URL}/WUW/WUW8.jpg`,
+    `${IMAGE_URL}/WUW/WUW9.jpg`,
+    `${IMAGE_URL}/WUW/WUW10.jpg`,
+  ],
 };

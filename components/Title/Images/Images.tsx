@@ -64,14 +64,14 @@ export default function TitleImages({ images }: TitleImagesProps) {
             ))}
           </div>
         </ul>
-        <Lottie
-          loop
-          animationData={lineLottie}
-          play
-          className={cx('line-lottie')}
-          speed={0.3}
-        />
       </div>
+      <Lottie
+        loop
+        animationData={lineLottie}
+        play
+        className={cx('line-lottie')}
+        speed={0.3}
+      />
     </div>
   );
 }

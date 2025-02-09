@@ -1,3 +1,9 @@
+import NavBar from '../components/NavBar/NavBar';
+
 export default function Works() {
-  return <div>자기소개 페이지</div>;
+  return (
+    <div>
+      <NavBar />
+    </div>
+  );
 }

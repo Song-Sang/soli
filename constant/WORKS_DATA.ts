@@ -309,6 +309,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'Hellerau, Dresden',
         },
       ],
+      images: IMAGES_DATA.WUW,
     },
   ],
 
@@ -392,6 +393,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'Hellerau, Dresden',
         },
       ],
+      images: IMAGES_DATA.WUW,
     },
   ],
 };
