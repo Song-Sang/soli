@@ -2,7 +2,7 @@ import styles from './title.module.scss';
 import classNames from 'classnames/bind';
 import NavBar from '../../../components/NavBar/NavBar';
 import { WORKS_DATA } from '../../../constant/WORKS_DATA';
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import People from '../../../components/Title/People/People';
 import TitleImages from '../../../components/Title/Images/Images';
 import Lottie from 'react-lottie-player';
@@ -19,20 +19,34 @@ interface WorkPageProps {
   workData: WORKS_DATA_INNER | null;
 }
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const { category, title } = context.query;
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = Object.keys(WORKS_DATA).flatMap((category) =>
+    WORKS_DATA[category].map((work) => ({
+      params: { category, title: work.title },
+    }))
+  );
 
-  const categoryString =
-    typeof category === 'string' ? category.split(',')[0] : null;
-  const works = categoryString ? WORKS_DATA[categoryString] : null;
-  const workData = works?.find((work) => work.title === title) || null;
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { category, title } = context.params as {
+    category: string;
+    title: string;
+  };
+
+  const works = WORKS_DATA[category] || [];
+  const workData = works.find((work) => work.title === title) || null;
 
   return {
     props: {
       workData,
     },
   };
-}
+};
 
 export default function WorkPage({ workData }: WorkPageProps) {
   const images = workData?.images || [];
