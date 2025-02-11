@@ -43,7 +43,9 @@ export default function Modal({ isOpen, onClose, images }: ModalProps) {
             className={cx('prev-button')}
           />
         </button>
-        <img src={imageSrc} alt="이미지" className={cx('modal-image')} />
+        <div className={cx('image-container')} onClick={onClose}>
+          <img src={imageSrc} alt="이미지" className={cx('modal-image')} />
+        </div>
         <button
           onClick={nextImage}
           disabled={currentIndex === images.length - 1}

@@ -72,7 +72,6 @@ export default function WorkPage({ workData }: WorkPageProps) {
   return (
     <div>
       <NavBar />
-
       <div className={cx('main')}>
         <div className={cx('description-section')}>
           <h1 className={cx('title')}>

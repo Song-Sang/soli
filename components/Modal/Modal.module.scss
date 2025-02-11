@@ -30,6 +30,13 @@
   border-radius: 5px;
 }
 
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .button {
   display: flex;
   align-items: center;

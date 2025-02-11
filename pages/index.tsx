@@ -33,7 +33,7 @@ export default function Home() {
     <div className={cx('home-wrapper')}>
       <nav className={cx('nav')}>
         <div className={cx('nav-title')}>
-          <p>scenoGRApHeR</p>
+          <p>scenoGRApheR</p>
           <p>•</p>
           <p>poRtfolio</p>
         </div>
