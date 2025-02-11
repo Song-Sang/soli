@@ -6,8 +6,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')], // 2. sassOptions 옵션 추가
+    includePaths: [path.join(__dirname, 'styles')],
   },
+
+  output: 'export',
 };
 
 export default nextConfig;
