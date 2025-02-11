@@ -1,0 +1,53 @@
+@import '/styles/main.scss';
+
+.mainTopic-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 760px;
+}
+
+.mainTopic-container {
+  display: flex;
+  justify-content: flex-end;
+
+  position: relative;
+
+  &.reverse {
+    justify-content: flex-start;
+  }
+}
+
+.title {
+  font-family: 'schoolBell';
+  font-size: 40px;
+
+  padding: 40px 150px 20px 20px;
+
+  &.reverse {
+    padding: 40px 20px 20px 150px;
+  }
+}
+
+.circle {
+  position: absolute;
+
+  height: 90px;
+
+  z-index: 2;
+
+  &.right {
+    top: 20px;
+    right: 110px;
+
+    width: 450px;
+  }
+
+  &.left {
+    top: 20px;
+    left: 120px;
+
+    width: 320px;
+  }
+}

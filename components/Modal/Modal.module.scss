@@ -1,0 +1,71 @@
+@import '/styles/main.scss';
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 1200px;
+}
+
+.modal-image {
+  max-width: 1000px;
+  max-height: 700px;
+
+  width: auto;
+  height: auto;
+
+  border-radius: 5px;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
+  }
+}
+
+.prev-button {
+  position: relative;
+  right: 3px;
+
+  width: 30px;
+  height: 30px;
+}
+
+.next-button {
+  position: relative;
+  left: 3px;
+
+  width: 30px;
+  height: 30px;
+
+  transform: rotate(180deg);
+}

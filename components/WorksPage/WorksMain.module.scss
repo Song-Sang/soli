@@ -1,0 +1,51 @@
+@import '/styles/main.scss';
+
+.worksMain-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 854px;
+}
+
+.worksMain-arrows {
+  font-size: 18px;
+
+  padding: 0 60px;
+
+  padding-top: 40px;
+}
+
+.arrow-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  font-family: 'Major Mono Display';
+  font-weight: 700;
+  letter-spacing: -2px;
+
+  background-color: #fcfaf8;
+
+  &:hover {
+    transition: transform 0.3s;
+    transform: translateX(-5px);
+  }
+}
+
+.next-arrow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.prev-arrow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.arrowImg {
+  &.reverse {
+    transform: rotate(180deg);
+  }
+}

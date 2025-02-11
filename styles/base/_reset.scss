@@ -18,15 +18,17 @@ html {
   font-family: $font-primary;
   font-style: normal;
   line-height: normal;
-  color: 000;
+  color: #fff;
 }
 
 body {
   font-family: $font-primary;
   font-style: normal;
   line-height: normal;
-  background: #fff;
+  background: #ebe3d8;
+  color: #000;
   height: 100vh;
+  background-color: #fcfaf8;
 }
 
 h1 {
@@ -42,7 +44,10 @@ input,
 select,
 textarea {
   border: none;
-  background-color: transparent;
+  // background-color: #17161b;
+  // color: #fff;
+  // border: 1px solid;
+  // border-color: #414141;
 
   &:focus {
     outline: none;

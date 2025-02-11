@@ -1,0 +1,105 @@
+@import '/styles/main.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  width: 1000px;
+
+  padding: 20px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+
+  height: 350px;
+}
+
+.title-word {
+  text-transform: uppercase;
+
+  font-family: 'Oswald', sans-serif;
+  line-height: 90px;
+  letter-spacing: -2px;
+  font-size: 90px;
+  font-weight: 800;
+}
+
+.category-summary-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  width: 700px;
+  height: 100px;
+}
+
+.category {
+  font-size: 16px;
+
+  text-transform: uppercase;
+
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.summary {
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 500px;
+  min-height: 200px;
+
+  margin-bottom: 50px;
+}
+
+.content-word {
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.circle-lottie {
+  width: 450px;
+
+  z-index: -999;
+
+  position: absolute;
+  right: 30px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 1000px;
+
+  padding: 70px 20px 20px;
+
+  p {
+    font-size: 14px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+  }
+
+  .year {
+    font-weight: 400;
+  }
+}

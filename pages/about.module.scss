@@ -1,0 +1,103 @@
+@import '/styles/main.scss';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: 'schoolBell';
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.subtitle {
+  font-family: 'Host Grotesk';
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 70px;
+
+  margin: 50px auto;
+
+  width: 850px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 70px;
+}
+
+.introduction {
+  font-family: 'Host Grotesk';
+  font-size: 16px;
+
+  margin-top: 10px;
+}
+
+.info-description-container {
+  display: flex;
+
+  gap: 170px;
+
+  border-top: 1px solid;
+
+  padding-top: 20px;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.info-label {
+  font-family: 'Scope One';
+  font-size: 20px;
+  font-weight: 800;
+
+  line-height: 20px;
+}
+
+.info-detail {
+  font-family: 'schoolBell';
+
+  padding-left: 5px;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.highlight {
+  font-family: 'oswald';
+
+  &.introduction {
+    font-size: 24px;
+  }
+}
+
+.profile-image {
+  filter: grayscale(100);
+}

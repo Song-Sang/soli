@@ -1,0 +1,86 @@
+@import '/styles/main.scss';
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 934px;
+}
+
+.contact-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 250px;
+
+  height: 859px;
+
+  padding: 50px;
+}
+
+.css-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 715px;
+}
+
+.contact-title {
+  font-family: 'schoolBell';
+  font-size: 100px;
+  font-weight: 700;
+
+  margin-top: 50px;
+}
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+
+  gap: 50px;
+}
+
+.information-container {
+  margin-bottom: 10px;
+
+  h2 {
+    font-family: 'Major Mono display';
+    font-size: 22px;
+
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-family: 'schoolBell';
+    font-size: 20px;
+
+    height: 30px;
+  }
+}
+
+.icon-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  background-color: #fff;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form-section {
+  display: flex;
+  align-items: center;
+}
