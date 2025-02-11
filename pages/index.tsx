@@ -10,10 +10,10 @@ import Link from 'next/link';
 const cx = classNames.bind(styles);
 
 export default function Home() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isStopped, setIsStopped] = useState(false);
 
-  const handleMouseEnter = (index: any) => {
+  const handleMouseEnter = (index: number) => {
     setHoveredIndex(index);
   };
 

@@ -1,6 +1,6 @@
 import styles from './WorksMain.module.scss';
 import classNames from 'classnames/bind';
-import Slider from 'react-slick';
+import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useRef, useState } from 'react';
@@ -11,8 +11,11 @@ import arrowImg from '@/public/images/icon/arrow.svg';
 
 const cx = classNames.bind(styles);
 
-function NextArrow(props: any) {
-  const { onClick } = props;
+interface ArrowProps {
+  onClick: () => void;
+}
+
+function NextArrow({ onClick }: ArrowProps) {
   return (
     <button onClick={onClick} className={cx('arrow-button')}>
       other category
@@ -27,8 +30,7 @@ function NextArrow(props: any) {
   );
 }
 
-function PrevArrow(props: any) {
-  const { onClick } = props;
+function PrevArrow({ onClick }: ArrowProps) {
   return (
     <button onClick={onClick} className={cx('arrow-button')}>
       <Image
@@ -44,17 +46,16 @@ function PrevArrow(props: any) {
 }
 
 export default function WorksMain() {
-  const sliderRef = useRef<any>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef<Slider>(null);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
   const totalSlides = 2;
 
-  const settings = {
+  const settings: Settings = {
     slidesToShow: 1,
     infinite: false,
     slidesToScroll: 1,
     arrows: false,
     speed: 2000,
-
     afterChange: (current: number) => {
       setCurrentSlide(current);
     },
@@ -65,12 +66,12 @@ export default function WorksMain() {
       <div className={cx('worksMain-arrows')}>
         <div className={cx('prev-arrow')}>
           {currentSlide > 0 && (
-            <PrevArrow onClick={() => sliderRef.current.slickPrev()} />
+            <PrevArrow onClick={() => sliderRef.current?.slickPrev()} />
           )}
         </div>
         <div className={cx('next-arrow')}>
           {currentSlide < totalSlides - 1 && (
-            <NextArrow onClick={() => sliderRef.current.slickNext()} />
+            <NextArrow onClick={() => sliderRef.current?.slickNext()} />
           )}
         </div>
       </div>
