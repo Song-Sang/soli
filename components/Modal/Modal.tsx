@@ -7,7 +7,7 @@ import nextButton from '@/public/images/icon/nextButton.svg';
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  images: any;
+  images: string[];
 }
 
 const cx = classNames.bind(styles);
@@ -21,9 +21,9 @@ function getCurrentImage(array: string[], index: number) {
 }
 
 export default function Modal({ isOpen, onClose, images }: ModalProps) {
-  if (!isOpen) return null;
-
   const { currentIndex, previousImage, nextImage } = useModalStore();
+
+  if (!isOpen) return null;
 
   const imageSrc = getCurrentImage(images, currentIndex);
 
@@ -44,7 +44,15 @@ export default function Modal({ isOpen, onClose, images }: ModalProps) {
           />
         </button>
         <div className={cx('image-container')} onClick={onClose}>
-          <img src={imageSrc} alt="이미지" className={cx('modal-image')} />
+          {imageSrc && (
+            <Image
+              src={imageSrc}
+              alt="이미지"
+              className={cx('modal-image')}
+              width={1500}
+              height={1000}
+            />
+          )}
         </div>
         <button
           onClick={nextImage}
