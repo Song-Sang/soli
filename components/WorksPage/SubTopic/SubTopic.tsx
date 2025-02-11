@@ -17,10 +17,12 @@ export default function SubTopic({
   summary,
   align,
 }: SubTopicProps) {
+  const UrlCategory = category.split(',')[0].trim();
+
   return (
     <div>
       <Link
-        href={`/projects/${category}/${title}`}
+        href={`/projects/${UrlCategory}/${title}`}
         className={cx('topic-wrapper', { reverse: align === 'reverse' })}
       >
         <h2 className={cx('title', { reverse: align === 'reverse' })}>
