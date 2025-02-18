@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
-import homeCircle from '@/public/images/home-circle.png';
+import homeCircle from '@/public/images/home-circle.webp';
 import Lottie from 'react-lottie-player';
 import LineLottie from '@/public/lottie/home-line-animation.json';
 import { useState } from 'react';

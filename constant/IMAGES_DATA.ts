@@ -9,7 +9,6 @@ export const IMAGES_DATA = {
     `${IMAGE_URL}/DenyingTheDragon/DTD5.webp`,
     `${IMAGE_URL}/DenyingTheDragon/DTD6.webp`,
     `${IMAGE_URL}/DenyingTheDragon/DTD7.webp`,
-    `${IMAGE_URL}/DenyingTheDragon/DTD8.webp`,
   ],
 
   Embodied: [

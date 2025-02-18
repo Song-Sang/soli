@@ -2,7 +2,7 @@ import styles from './about.module.scss';
 import classNames from 'classnames/bind';
 import Image from 'next/image';
 import NavBar from '../components/NavBar/NavBar';
-import profile from '@/public/images/profile.jpg';
+import profile from '@/public/images/profile.webp';
 import {
   DESCRIPTION_1,
   DESCRIPTION_2,

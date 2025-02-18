@@ -49,8 +49,8 @@ export default function Modal({ isOpen, onClose, images }: ModalProps) {
               src={imageSrc}
               alt="이미지"
               className={cx('modal-image')}
-              width={1500}
-              height={1000}
+              width={1}
+              height={600}
             />
           )}
         </div>
