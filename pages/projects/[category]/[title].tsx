@@ -11,7 +11,7 @@ import TopScrollButton from '../../../components/TopScrollButton/TopScrollButton
 import { copyURL } from '@/utils/copyURL';
 import Modal from '../../../components/Modal/Modal';
 import useModalStore from '../../../store/useModalStore';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -51,6 +51,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export default function WorkPage({ workData }: WorkPageProps) {
   const images = workData?.images || [];
 
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
   const { isOpen, closeModal } = useModalStore();
   const resetModal = useModalStore((state) => state.reset);
 
@@ -73,14 +75,52 @@ export default function WorkPage({ workData }: WorkPageProps) {
     };
   }, [isOpen]);
 
+  // 분리 필요
   let titleWords;
 
-  // 분리 필요
   if (workData?.title === 'Forest love : Meeting once') {
     titleWords = workData?.title.split(/:\s*/) || [];
     titleWords[0] += ' :';
   } else {
     titleWords = workData?.title.split(' ') || [];
+  }
+
+  useEffect(() => {
+    if (images.length === 0) {
+      setImagesLoaded(true);
+      return;
+    }
+
+    let loadedImagesCount = 0;
+
+    const handleImageLoad = () => {
+      loadedImagesCount += 1;
+      if (loadedImagesCount === images.length) {
+        setImagesLoaded(true);
+      }
+    };
+
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image; // 이미지 URL
+      img.onload = handleImageLoad;
+      img.onerror = handleImageLoad; // 오류 발생 시에도 카운트 증가
+    });
+
+    return () => {
+      // 클린업: 이미지 로드 이벤트 리스너 제거
+      loadedImagesCount = 0;
+    };
+  }, [images]);
+
+  if (!imagesLoaded) {
+    return (
+      <div>
+        <div>
+          <NavBar />
+        </div>
+      </div>
+    );
   }
 
   return (
