@@ -19,10 +19,6 @@ export default function TitleImages({ images }: TitleImagesProps) {
   const onRollingStop = () => setImgRolling(false);
   const onRollingRun = () => setImgRolling(true);
 
-  if (!images) {
-    return null;
-  }
-
   return (
     <div className={cx('wrapper')}>
       <div className={cx('slide-container')}>
@@ -34,7 +30,7 @@ export default function TitleImages({ images }: TitleImagesProps) {
           <div
             className={cx('slide', 'original', { stop: isOpen || !imgRolling })}
           >
-            {images.map((image, index) => (
+            {images?.map((image, index) => (
               <li key={index} onClick={() => openModal(index)}>
                 <Image
                   className={cx('image')}
@@ -50,7 +46,7 @@ export default function TitleImages({ images }: TitleImagesProps) {
           <div
             className={cx('slide', 'clone', { stop: isOpen || !imgRolling })}
           >
-            {images.map((image, index) => (
+            {images?.map((image, index) => (
               <li key={index} onClick={() => openModal(index)}>
                 <Image
                   className={cx('image')}
