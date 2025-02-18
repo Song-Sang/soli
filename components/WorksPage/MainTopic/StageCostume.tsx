@@ -4,7 +4,7 @@ import SubTopic from '../SubTopic/SubTopic';
 import { editWorksData } from '../../../utils/editWorksData';
 import { WORKS_DATA } from '../../../constant/WORKS_DATA';
 import Image from 'next/image';
-import homeCircle from '@/public/images/home-circle.png';
+import homeCircle from '@/public/images/home-circle.webp';
 
 const cx = classNames.bind(styles);
 
