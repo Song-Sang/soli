@@ -30,50 +30,52 @@ export default function Home() {
   ];
 
   return (
-    <div className={cx('home-wrapper')}>
-      <nav className={cx('nav')}>
-        <div className={cx('nav-title')}>
-          <p>scenoGRApheR</p>
-          <p>•</p>
-          <p>poRtfolio</p>
+    <div className={cx('home-css-wrapper')}>
+      <div className={cx('home-wrapper')}>
+        <h1 className={cx('head')}>
+          <div className={cx('head-title')}>
+            <p>scenoGRApheR</p>
+            <p>•</p>
+            <p>poRtfolio</p>
+          </div>
+        </h1>
+        <div className={cx('home-container')}>
+          <main className={cx('main-container')}>
+            <div className={cx('home-title-wrapper')}>
+              <h1 className={cx('home-title')}>HOME</h1>
+              <Image
+                src={homeCircle}
+                width={800}
+                height={800}
+                alt="동그라미"
+                className={cx('circle')}
+              />
+            </div>
+            <div className={cx('button-container')}>
+              {menuItems.map((item, index) => (
+                <div key={index} className={cx('menu-wrapper')}>
+                  <Link
+                    href={item.path}
+                    className={cx('button', 'menu', item.className)}
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {item.label}
+                  </Link>
+                  {hoveredIndex === index && (
+                    <Lottie
+                      play={!isStopped}
+                      loop={false}
+                      animationData={LineLottie}
+                      className={cx('line-lottie')}
+                      onComplete={() => setIsStopped(true)}
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </main>
         </div>
-      </nav>
-      <div className={cx('home-container')}>
-        <main className={cx('main-container')}>
-          <div className={cx('home-title-wrapper')}>
-            <h1 className={cx('home-title')}>HOME</h1>
-            <Image
-              src={homeCircle}
-              width={800}
-              height={800}
-              alt="동그라미"
-              className={cx('circle')}
-            />
-          </div>
-          <div className={cx('button-container')}>
-            {menuItems.map((item, index) => (
-              <div key={index} className={cx('menu-wrapper')}>
-                <Link
-                  href={item.path}
-                  className={cx('button', 'menu', item.className)}
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {item.label}
-                </Link>
-                {hoveredIndex === index && (
-                  <Lottie
-                    play={!isStopped}
-                    loop={false}
-                    animationData={LineLottie}
-                    className={cx('line-lottie')}
-                    onComplete={() => setIsStopped(true)}
-                  />
-                )}
-              </div>
-            ))}
-          </div>
-        </main>
         <footer className={cx('footer-container')}>
           <p className={cx('title2')}>BASED IN BERLIN, GERMANY</p>
           <p className={cx('title4')}>@2023-2025 </p>

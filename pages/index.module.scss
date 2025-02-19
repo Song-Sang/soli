@@ -1,13 +1,26 @@
 @import '/styles/main.scss';
 
+.home-css-wrapper {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .home-wrapper {
-  height: 934px;
+  height: 100vh;
+  max-height: 1200px;
+  min-height: 900px;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  overflow: scroll;
 }
 
-.nav {
+.head {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +30,7 @@
   height: 30px;
 }
 
-.nav-title {
+.head-title {
   display: flex;
 
   gap: 20px;
@@ -32,8 +45,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  height: 855px;
 }
 
 .main-container {
@@ -48,6 +59,8 @@
 .home-title-wrapper {
   display: flex;
   justify-content: center;
+
+  position: relative;
 }
 
 .home-title {
@@ -108,7 +121,7 @@
 
 .circle {
   position: absolute;
-  top: 200px;
+  top: 27px;
 
   width: 400px;
   height: 90px;
