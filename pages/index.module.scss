@@ -58,12 +58,20 @@
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: #fcfaf800;
   font-size: 120px;
   font-weight: 500;
 
   line-height: 110px;
   letter-spacing: -8px;
+
+  overflow: hidden;
+
+  width: 100%;
 
   &.menu {
     font-family: 'Host Grotesk';
@@ -85,6 +93,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 550px;
 }
 
 .menu-wrapper {
@@ -92,6 +102,8 @@
   justify-content: center;
 
   position: relative;
+
+  width: 100%;
 }
 
 .circle {

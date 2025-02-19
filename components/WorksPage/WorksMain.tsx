@@ -77,8 +77,8 @@ export default function WorksMain() {
       </div>
       <div className={cx('worksMain-contents')}>
         <Slider ref={sliderRef} {...settings}>
-          <ArtworkPerformance />
           <StageCostume />
+          <ArtworkPerformance />
         </Slider>
       </div>
     </main>

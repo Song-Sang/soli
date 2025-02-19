@@ -19,7 +19,7 @@ export default function StageCostume() {
       <h1 className={cx('mainTopic')}>
         <div className={cx('mainTopic-container', 'reverse')}>
           <p className={cx('title', 'reverse')}>
-            Stage / Costume
+            Stage • Costume
             <Image
               src={homeCircle}
               width={800}
