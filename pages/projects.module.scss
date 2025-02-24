@@ -1,8 +1,12 @@
 @import '/styles/main.scss';
 
+.works-css-wrapper {
+  height: 100vh;
+}
+
 .works-wrapper {
   display: flex;
   flex-direction: column;
 
-  height: 934px;
+  height: 100vh;
 }

@@ -1,16 +1,16 @@
-@mixin laptop {
+@mixin xxl {
   @media (max-width: #{$xxl-breakpoint}) {
     @content;
   }
 }
 
-@mixin tablet-large {
+@mixin xl {
   @media (max-width: #{$xl-breakpoint}) {
     @content;
   }
 }
 
-@mixin tablet-small {
+@mixin l {
   @media (max-width: #{$l-breakpoint}) {
     @content;
   }

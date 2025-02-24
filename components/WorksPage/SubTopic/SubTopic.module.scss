@@ -2,19 +2,21 @@
 
 .topic-wrapper {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
 
-  padding: 0 60px;
-
-  height: 100px;
-
-  &.reverse {
-    justify-content: flex-end;
-  }
+  padding: 0 50px;
 
   &:hover {
     background-color: #000;
     color: #fff;
+  }
+
+  @include xl {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
   }
 }
 
@@ -24,32 +26,47 @@
 
   text-transform: uppercase;
 
-  position: relative;
-  bottom: 5px;
-
   font-family: 'Oswald', sans-serif;
-  font-size: 100px;
+  font-size: 90px;
   font-weight: 700;
   letter-spacing: -5px;
 
+  line-height: 1;
+
   &.reverse {
     order: 2;
+
+    @include xl {
+      order: 0;
+    }
+  }
+
+  @include xxl {
+    font-size: 85px;
+  }
+
+  @include xl {
+    font-size: 80px;
+  }
+
+  @include l {
+    font-size: 60px;
   }
 }
 
 .topic-details {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   justify-content: flex-end;
-
-  height: 100px;
-
-  padding-bottom: 10px;
+  align-items: flex-end;
 
   &.reverse {
-    order: 1;
     align-items: flex-start;
+    order: 0;
+  }
+
+  @include xl {
+    flex-direction: row;
   }
 }
 
@@ -57,6 +74,12 @@
   font-family: 'Oswald';
   font-size: 18px;
   font-weight: 400;
+
+  text-transform: uppercase;
+
+  @include xl {
+    display: none;
+  }
 }
 
 .description {
@@ -64,4 +87,22 @@
   font-size: 18px;
   font-weight: 100;
   letter-spacing: 1px;
+}
+
+.border {
+  flex-grow: 1;
+  border-bottom: 1px dashed #6e6e6e;
+  margin: 0 20px;
+
+  position: relative;
+  top: -12px;
+
+  &.reverse {
+    align-items: flex-start;
+    order: 1;
+  }
+
+  @include xl {
+    display: none;
+  }
 }
