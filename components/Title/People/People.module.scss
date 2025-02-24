@@ -2,10 +2,14 @@
 
 .wrapper {
   width: 1000px;
-  padding: 100px 20px 20px;
+  padding: 0 20px;
 
   display: flex;
   justify-content: space-between;
+
+  @include l {
+    width: 768px;
+  }
 }
 
 .section-title {
@@ -35,6 +39,10 @@
 
   padding-bottom: 20px;
   border-bottom: 1px solid;
+
+  @include l {
+    width: 500px;
+  }
 }
 
 .info-container {
@@ -91,6 +99,10 @@
 
   padding-bottom: 20px;
   border-bottom: 1px solid;
+
+  @include l {
+    width: 200px;
+  }
 }
 
 .role-container {

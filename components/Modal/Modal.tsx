@@ -29,9 +29,12 @@ export default function Modal({ isOpen, onClose, images }: ModalProps) {
 
   return (
     <div className={cx('modal-overlay')} onClick={onClose}>
-      <div className={cx('modal-content')} onClick={(e) => e.stopPropagation()}>
+      <div className={cx('modal-content')}>
         <button
-          onClick={previousImage}
+          onClick={(e) => {
+            e.stopPropagation();
+            previousImage();
+          }}
           disabled={currentIndex === 0}
           className={cx('button', 'prev')}
         >
@@ -43,19 +46,25 @@ export default function Modal({ isOpen, onClose, images }: ModalProps) {
             className={cx('prev-button')}
           />
         </button>
-        <div className={cx('image-container')} onClick={onClose}>
+        <div
+          className={cx('image-container')}
+          onClick={(e) => e.stopPropagation()}
+        >
           {imageSrc && (
             <Image
               src={imageSrc}
               alt="이미지"
               className={cx('modal-image')}
               width={1}
-              height={600}
+              height={550}
             />
           )}
         </div>
         <button
-          onClick={nextImage}
+          onClick={(e) => {
+            e.stopPropagation();
+            nextImage();
+          }}
           disabled={currentIndex === images.length - 1}
           className={cx('button', 'next')}
         >

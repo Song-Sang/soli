@@ -3,6 +3,11 @@
   position: fixed;
   bottom: 30px;
   right: 100px;
+
+  @include l {
+    bottom: 50px;
+    right: 50px;
+  }
 }
 
 .button {

@@ -53,6 +53,10 @@
       }
     }
   }
+
+  @include l {
+    width: 768px;
+  }
 }
 
 .line-lottie {
@@ -62,6 +66,12 @@
 
   position: absolute;
   top: 45px;
+
+  @include l {
+    width: 728px;
+
+    top: 105px;
+  }
 }
 
 @keyframes infiniteAnimation1 {

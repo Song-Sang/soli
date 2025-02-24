@@ -4,6 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  gap: 100px;
+
+  @include l {
+    gap: 60px;
+  }
 }
 
 .description-section {
@@ -14,6 +20,10 @@
   width: 1000px;
 
   padding: 20px;
+
+  @include l {
+    width: 768px;
+  }
 }
 
 .title {
@@ -24,6 +34,8 @@
   position: relative;
 
   height: 350px;
+
+  padding: 0 20px;
 }
 
 .title-word {
@@ -34,6 +46,10 @@
   letter-spacing: -2px;
   font-size: 90px;
   font-weight: 800;
+
+  @include l {
+    font-size: 80px;
+  }
 }
 
 .category-summary-container {
@@ -65,9 +81,6 @@
   gap: 20px;
 
   width: 500px;
-  min-height: 200px;
-
-  margin-bottom: 50px;
 }
 
 .content-word {
@@ -81,7 +94,7 @@
   z-index: -999;
 
   position: absolute;
-  right: 30px;
+  left: -200px;
 }
 
 .footer {
@@ -91,7 +104,8 @@
 
   width: 1000px;
 
-  padding: 70px 20px 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
 
   p {
     font-size: 14px;
@@ -101,5 +115,9 @@
 
   .year {
     font-weight: 400;
+  }
+
+  @include l {
+    width: 768px;
   }
 }

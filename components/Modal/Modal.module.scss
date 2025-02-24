@@ -18,16 +18,41 @@
   justify-content: space-between;
 
   width: 1200px;
+  height: 100%;
+
+  @include xl {
+    width: 900px;
+  }
+
+  @include l {
+    width: 700px;
+  }
 }
 
 .modal-image {
+  max-width: 1000px;
+  max-height: 800px;
+
   width: auto;
+  height: auto;
 
   border-radius: 5px;
+
+  object-fit: contain;
+  aspect-ratio: auto;
+
+  @include xl {
+    max-width: 750px;
+    max-height: 700px;
+  }
+
+  @include l {
+    max-width: 580px;
+    max-height: 700px;
+  }
 }
 
 .image-container {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,6 +71,11 @@
     transition: 0.5s;
     transform: scale(1.05);
   }
+
+  @include xl {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .prev-button {
@@ -54,6 +84,11 @@
 
   width: 30px;
   height: 30px;
+
+  @include xl {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .next-button {
@@ -64,4 +99,9 @@
   height: 30px;
 
   transform: rotate(180deg);
+
+  @include xl {
+    width: 25px;
+    height: 25px;
+  }
 }
