@@ -261,7 +261,7 @@ export const WORKS_DATA: WORKS_DATA = {
     {
       title: 'WUW',
       summary: 'WIND UND WAND',
-      category: 'stage, costume',
+      category: 'costume, stage',
       content: [
         'WUW is an abbreviation for WIND UND WAND (WIND AND WALL) and describes a 30-minute dance performance for young audiences aged 10+. The metaphors of the wind and the wall symbolize the ambivalent relationship between children and their parents and the gap between their wishes and reality. They also stand for intertwined thoughts and emotions and unclear interim periods. No longer a child and not yet a teenager - The time before puberty is both a formative and challenging phase. At the same time, it is a playful journey with many surprises, adventures, parties and unexpected transformations. The wind has a very flexible quality: it can be a violent storm or a gentle, pleasant breeze, and it can quickly change its mood – just like young people. Inspired by how the wind changes shape, ZINADA explores creative ways to overcome walls in WUW. During the rehearsal and development phase of the piece, the artists conducted interviews with the target group and held workshops on topics that concern children of this age group. The work with the target group was not just inspiring but also integral to the development of the movement material.',
       ],
@@ -345,7 +345,7 @@ export const WORKS_DATA: WORKS_DATA = {
     {
       title: 'WUW',
       summary: 'WIND UND WAND',
-      category: 'stage, costume',
+      category: 'costume, stage',
       content: [
         'WUW is an abbreviation for WIND UND WAND (WIND AND WALL) and describes a 30-minute dance performance for young audiences aged 10+. The metaphors of the wind and the wall symbolize the ambivalent relationship between children and their parents and the gap between their wishes and reality. They also stand for intertwined thoughts and emotions and unclear interim periods. No longer a child and not yet a teenager - The time before puberty is both a formative and challenging phase. At the same time, it is a playful journey with many surprises, adventures, parties and unexpected transformations. The wind has a very flexible quality: it can be a violent storm or a gentle, pleasant breeze, and it can quickly change its mood – just like young people. Inspired by how the wind changes shape, ZINADA explores creative ways to overcome walls in WUW. During the rehearsal and development phase of the piece, the artists conducted interviews with the target group and held workshops on topics that concern children of this age group. The work with the target group was not just inspiring but also integral to the development of the movement material.',
       ],

@@ -23,10 +23,9 @@ export default function Home() {
   };
 
   const menuItems = [
-    { label: 'PROJECTS', path: '/projects', className: 'projects' },
-    { label: 'CONTACT', path: '/contact', className: 'contact' },
-    { label: 'ABOUT', path: '/about', className: 'about' },
-    { label: 'GALLERY', path: '/gallery', className: 'gallery' },
+    { label: 'PROJECTS', path: '/projects' },
+    { label: 'ABOUT', path: '/about' },
+    { label: 'CONTACT', path: '/contact' },
   ];
 
   return (
@@ -41,22 +40,13 @@ export default function Home() {
         </h1>
         <div className={cx('home-container')}>
           <main className={cx('main-container')}>
-            <div className={cx('home-title-wrapper')}>
-              <h1 className={cx('home-title')}>HOME</h1>
-              <Image
-                src={homeCircle}
-                width={800}
-                height={800}
-                alt="동그라미"
-                className={cx('circle')}
-              />
-            </div>
+            <div className={cx('home-title-wrapper')}></div>
             <div className={cx('button-container')}>
               {menuItems.map((item, index) => (
                 <div key={index} className={cx('menu-wrapper')}>
                   <Link
                     href={item.path}
-                    className={cx('button', 'menu', item.className)}
+                    className={cx('button', 'menu')}
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave}
                   >
@@ -75,11 +65,12 @@ export default function Home() {
               ))}
             </div>
           </main>
+          <footer className={cx('footer-container')}>
+            <p>Based In BERLIN, GERMANY</p>
+            <p>Soli-Jang</p>
+            <p>@2023-2025</p>
+          </footer>
         </div>
-        <footer className={cx('footer-container')}>
-          <p className={cx('title2')}>BASED IN BERLIN, GERMANY</p>
-          <p className={cx('title4')}>@2023-2025 </p>
-        </footer>
       </div>
     </div>
   );

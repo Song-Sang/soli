@@ -13,11 +13,11 @@
 }
 
 .section-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: $font-title;
   font-size: 40px;
   font-weight: 400;
 
-  border-bottom: 2px solid;
+  border-bottom: 1px solid #d5d5d5;
 }
 
 .info-detail-wrapper {
@@ -38,7 +38,7 @@
   width: 630px;
 
   padding-bottom: 20px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #b7b7b7;
 
   @include l {
     width: 500px;
@@ -53,20 +53,20 @@
 
 .detail {
   font-size: 16px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: $font-main;
 
   &.title {
     font-size: 18px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 100;
+    font-family: $font-copyright;
+    font-weight: 600;
 
     margin-bottom: 5px;
   }
 
   &.role-title {
     font-size: 18px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 100;
+    font-family: $font-copyright;
+    font-weight: 600;
 
     margin-bottom: 5px;
 
@@ -85,7 +85,7 @@
 }
 
 .grid-align {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #b7b7b7;
   text-align: end;
 }
 
@@ -98,7 +98,7 @@
   width: 300px;
 
   padding-bottom: 20px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #b7b7b7;
 
   @include l {
     width: 200px;

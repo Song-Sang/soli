@@ -2,6 +2,7 @@ import Image from 'next/image';
 import useModalStore from '../../store/useModalStore';
 import styles from './Modal.module.scss';
 import classNames from 'classnames/bind';
+import prevButton from '@/public/images/icon/prevButton.svg';
 import nextButton from '@/public/images/icon/nextButton.svg';
 
 interface ModalProps {
@@ -39,7 +40,7 @@ export default function Modal({ isOpen, onClose, images }: ModalProps) {
           className={cx('button', 'prev')}
         >
           <Image
-            src={nextButton}
+            src={prevButton}
             alt="버튼화살표"
             width={30}
             height={30}
