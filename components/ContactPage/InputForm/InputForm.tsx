@@ -56,6 +56,7 @@ export default function InputForm() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
+              {errors.name && <p className={cx('error')}>{errors.name}</p>}
             </div>
             <div className={cx('input-container')}>
               <label className={cx('label', { 'error-box': errors.email })}>
@@ -69,6 +70,7 @@ export default function InputForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {errors.email && <p className={cx('error')}>{errors.email}</p>}
             </div>
             <div className={cx('input-container')}>
               <label className={cx('label', { 'error-box': errors.phone })}>
@@ -82,6 +84,7 @@ export default function InputForm() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
+              {errors.phone && <p className={cx('error')}>{errors.phone}</p>}
             </div>
             <div className={cx('input-container', 'textarea-container')}>
               <label className={cx('label', { 'error-box': errors.message })}>
@@ -94,20 +97,16 @@ export default function InputForm() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-            </div>
-          </div>
-          <div className={cx('input-footer')}>
-            <button className={cx('button')} type="submit">
-              SEND
-            </button>
-            <div>
-              {errors.name && <p className={cx('error')}>{errors.name}</p>}
-              {errors.email && <p className={cx('error')}>{errors.email}</p>}
-              {errors.phone && <p className={cx('error')}>{errors.phone}</p>}
               {errors.message && (
                 <p className={cx('error')}>{errors.message}</p>
               )}
             </div>
+          </div>
+          <div className={cx('input-footer')}>
+            <div></div>
+            <button className={cx('button')} type="submit">
+              SEND
+            </button>
           </div>
         </div>
       </form>

@@ -11,42 +11,44 @@ const cx = classNames.bind(styles);
 
 export default function Contact() {
   return (
-    <div className={cx('contact-container')}>
+    <div className={cx('wrapper')}>
       <NavBar />
-      <main className={cx('contact-main')}>
-        <div className={cx('css-wrapper')}>
-          <h1 className={cx('contact-title')}>CONTACT</h1>
-          <section className={cx('contact-information')}>
-            <div className={cx('information-container')}>
-              <h2>direct contact</h2>
-              <p>Mail : 941227_@naver.com</p>
-              <p>Phone : +82 010 5663 3520</p>
-            </div>
-            <div className={cx('icon-wrapper')}>
-              <div className={cx('icon-container')} onClick={copyURL}>
-                <Image src={urlImg} alt="url 아이콘" width={30} height={30} />
-              </div>
-              <a
-                href="https://www.instagram.com/sol_2_jang"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className={cx('icon-container')}>
-                  <Image
-                    src={instagramImg}
-                    alt="instagram 아이콘"
-                    width={30}
-                    height={30}
-                  />
+      <div className={cx('main-wrapper')}>
+        <main className={cx('main')}>
+          <section className={cx('description-container')}>
+            <h1 className={cx('title')}>CONTACT</h1>
+            <div className={cx('info-container')}>
+              <h2 className={cx('info-title')}>direct contact</h2>
+              <p className={cx('info', 'email')}>941227_@naver.com</p>
+              <p className={cx('info', 'phone')}>+82 010 5663 3520</p>
+
+              <div className={cx('icon-container')}>
+                <div className={cx('icon')} onClick={copyURL}>
+                  <Image src={urlImg} alt="url 아이콘" width={30} height={30} />
                 </div>
-              </a>
+                <a
+                  href="https://www.instagram.com/sol_2_jang"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className={cx('icon')}>
+                    <Image
+                      src={instagramImg}
+                      alt="instagram 아이콘"
+                      width={30}
+                      height={30}
+                    />
+                  </div>
+                </a>
+              </div>
             </div>
           </section>
-        </div>
-        <section className={cx('form-section')}>
+
+          <div className={cx('divider')}></div>
+
           <InputForm />
-        </section>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }
