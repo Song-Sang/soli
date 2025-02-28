@@ -66,7 +66,7 @@ export default function Home() {
             </div>
           </main>
           <footer className={cx('footer-container')}>
-            <p>Based In BERLIN, GERMANY</p>
+            <p>BASED IN BERLIN, GERMANY</p>
             <p>Soli-Jang</p>
             <p>@2023-2025</p>
           </footer>

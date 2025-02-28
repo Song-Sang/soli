@@ -34,8 +34,8 @@ export default function TitleImages({ images }: TitleImagesProps) {
               <li key={index} onClick={() => openModal(index)}>
                 <Image
                   className={cx('image')}
-                  width={250}
-                  height={250}
+                  width={500}
+                  height={500}
                   src={image}
                   alt="아"
                   priority
@@ -50,8 +50,8 @@ export default function TitleImages({ images }: TitleImagesProps) {
               <li key={index} onClick={() => openModal(index)}>
                 <Image
                   className={cx('image')}
-                  width={250}
-                  height={250}
+                  width={500}
+                  height={500}
                   src={image}
                   alt="아"
                   priority
