@@ -8,6 +8,14 @@
   position: relative;
 
   height: calc(100vh - 75px);
+
+  @include xl {
+    height: calc(100vh - 72px);
+  }
+
+  @include m {
+    height: calc(100vh - 38px);
+  }
 }
 
 .slider-container {
@@ -20,6 +28,10 @@
 
   @include xl {
     align-items: flex-start;
+  }
+
+  @include m {
+    margin-bottom: 0px;
   }
 }
 
@@ -39,6 +51,10 @@
 
   @include l {
     max-height: calc(100vh - 292px);
+  }
+
+  @include m {
+    max-height: calc(100vh - 168px);
   }
 }
 
@@ -64,11 +80,22 @@
   @include xl {
     font-size: 16px;
   }
+
+  @include m {
+    font-size: 14px;
+
+    gap: 5px;
+  }
 }
 
 .arrowImg {
   &.reverse {
     transform: rotate(180deg);
+  }
+
+  @include m {
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -90,17 +117,28 @@
   @include l {
     min-height: 70px;
   }
+
+  @include m {
+    min-height: 50px;
+    padding: 10px 20px;
+
+    margin-bottom: 80px;
+  }
 }
 
 .projects-subject {
   font-size: 35px;
   font-family: $font-title;
+
+  @include m {
+    font-size: 22px;
+  }
 }
 
 .scroll-indicator {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 5px;
+  right: 5px;
 
   width: 100px;
   height: auto;

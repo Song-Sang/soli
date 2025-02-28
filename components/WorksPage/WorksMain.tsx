@@ -54,19 +54,16 @@ function PrevArrow({ onClick }: ArrowProps) {
 
 export default function WorksMain() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const { slideRefs, hasScroll, scrollIsVisible } =
-    useProjectScroll(currentSlide);
-
-  const totalSlides = 2;
+  const { slideRefs, hasScroll, endScroll } = useProjectScroll(currentSlide);
 
   const handleNext = () => {
-    if (currentSlide < totalSlides - 1) {
+    if (currentSlide === 0) {
       setCurrentSlide(currentSlide + 1);
     }
   };
 
   const handlePrev = () => {
-    if (currentSlide > 0) {
+    if (currentSlide === 1) {
       setCurrentSlide(currentSlide - 1);
     }
   };
@@ -75,8 +72,8 @@ export default function WorksMain() {
     <>
       <NavBar />
       <main className={cx('worksMain-wrapper')}>
-        {currentSlide > 0 && <PrevArrow onClick={handlePrev} />}
-        {currentSlide < totalSlides - 1 && <NextArrow onClick={handleNext} />}
+        {currentSlide === 1 && <PrevArrow onClick={handlePrev} />}
+        {currentSlide === 0 && <NextArrow onClick={handleNext} />}
 
         <div
           className={cx('slider-container')}
@@ -88,15 +85,6 @@ export default function WorksMain() {
               slideRefs.current[0] = el;
             }}
           >
-            {hasScroll[0] && (
-              <Lottie
-                loop
-                animationData={swipeLottie}
-                play
-                className={cx('scroll-indicator', { rotate: !scrollIsVisible })}
-                speed={0.3}
-              />
-            )}
             <StageCostume />
           </div>
           <div
@@ -105,18 +93,27 @@ export default function WorksMain() {
               slideRefs.current[1] = el;
             }}
           >
-            {hasScroll[1] && (
-              <Lottie
-                loop
-                animationData={swipeLottie}
-                play
-                className={cx('scroll-indicator', { rotate: !scrollIsVisible })}
-                speed={0.3}
-              />
-            )}
             <ArtworkPerformance />
           </div>
         </div>
+        {hasScroll[0] && currentSlide === 0 && (
+          <Lottie
+            loop
+            animationData={swipeLottie}
+            play
+            className={cx('scroll-indicator', { rotate: endScroll })}
+            speed={0.3}
+          />
+        )}
+        {hasScroll[1] && currentSlide === 1 && (
+          <Lottie
+            loop
+            animationData={swipeLottie}
+            play
+            className={cx('scroll-indicator', { rotate: endScroll })}
+            speed={0.3}
+          />
+        )}
       </main>
     </>
   );

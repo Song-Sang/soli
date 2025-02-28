@@ -3,13 +3,21 @@ import { useEffect, useRef, useState } from 'react';
 export const useProjectScroll = (currentSlide: number) => {
   const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [hasScroll, setHasScroll] = useState<boolean[]>([false, false]);
-  const [scrollIsVisible, setScrollIsVisible] = useState(true);
+  const [endScroll, setEndScroll] = useState(false);
 
   const checkScroll = () => {
     const scrollStates = slideRefs.current.map((slide) => {
       return slide ? slide.scrollHeight > slide.clientHeight : false;
     });
     setHasScroll(scrollStates);
+
+    const currentSlideRef = slideRefs.current[currentSlide];
+    if (currentSlideRef) {
+      const isAtBottom =
+        currentSlideRef.scrollTop + currentSlideRef.clientHeight + 20 >=
+        currentSlideRef.scrollHeight;
+      setEndScroll(isAtBottom);
+    }
   };
 
   useEffect(() => {
@@ -34,8 +42,8 @@ export const useProjectScroll = (currentSlide: number) => {
       if (slide) {
         const handleScrollEvent = () => {
           const isAtBottom =
-            slide.scrollTop + slide.clientHeight >= slide.scrollHeight;
-          setScrollIsVisible(!isAtBottom);
+            slide.scrollTop + slide.clientHeight + 20 >= slide.scrollHeight;
+          setEndScroll(isAtBottom);
         };
         slide.addEventListener('scroll', handleScrollEvent);
         return () => {
@@ -48,5 +56,5 @@ export const useProjectScroll = (currentSlide: number) => {
     handleScroll(1);
   }, [currentSlide]);
 
-  return { slideRefs, hasScroll, scrollIsVisible };
+  return { slideRefs, hasScroll, endScroll };
 };

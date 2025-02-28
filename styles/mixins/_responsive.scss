@@ -15,3 +15,9 @@
     @content;
   }
 }
+
+@mixin m {
+  @media (max-width: #{$m-breakpoint}) {
+    @content;
+  }
+}

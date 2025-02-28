@@ -26,6 +26,10 @@
     border-top: 1px dashed;
     padding: 9px 35px 10px;
   }
+
+  @include m {
+    padding: 9px 20px 10px;
+  }
 }
 
 .title {
@@ -53,6 +57,12 @@
 
     line-height: 60px;
   }
+
+  @include m {
+    font-size: 40px;
+
+    line-height: 40px;
+  }
 }
 
 .topic-details {
@@ -75,6 +85,10 @@
   @include l {
     font-size: 18px;
   }
+
+  @include m {
+    font-size: 14px;
+  }
 }
 
 .description {
@@ -84,6 +98,10 @@
 
   @include l {
     font-size: 16px;
+  }
+
+  @include m {
+    font-size: 14px;
   }
 }
 

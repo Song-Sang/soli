@@ -40,35 +40,32 @@ export default function Home() {
         </h1>
         <div className={cx('home-container')}>
           <main className={cx('main-container')}>
-            <div className={cx('home-title-wrapper')}></div>
-            <div className={cx('button-container')}>
-              {menuItems.map((item, index) => (
-                <div key={index} className={cx('menu-wrapper')}>
-                  <Link
-                    href={item.path}
-                    className={cx('button', 'menu')}
-                    onMouseEnter={() => handleMouseEnter(index)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    {item.label}
-                  </Link>
-                  {hoveredIndex === index && (
-                    <Lottie
-                      play={!isStopped}
-                      loop={false}
-                      animationData={LineLottie}
-                      className={cx('line-lottie')}
-                      onComplete={() => setIsStopped(true)}
-                    />
-                  )}
-                </div>
-              ))}
-            </div>
+            {menuItems.map((item, index) => (
+              <div key={index} className={cx('menu-wrapper')}>
+                <Link
+                  href={item.path}
+                  className={cx('button')}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {item.label}
+                </Link>
+                {hoveredIndex === index && (
+                  <Lottie
+                    play={!isStopped}
+                    loop={false}
+                    animationData={LineLottie}
+                    className={cx('line-lottie')}
+                    onComplete={() => setIsStopped(true)}
+                  />
+                )}
+              </div>
+            ))}
           </main>
           <footer className={cx('footer-container')}>
-            <p>BASED IN BERLIN, GERMANY</p>
-            <p>Soli-Jang</p>
-            <p>@2023-2025</p>
+            <p className={cx('footer', 'based')}>BASED IN BERLIN, GERMANY</p>
+            <p className={cx('footer', 'name')}>Soli-Jang</p>
+            <p className={cx('footer', 'year')}>@2023-2025</p>
           </footer>
         </div>
       </div>
