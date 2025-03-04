@@ -1,30 +1,54 @@
 @import '/styles/main.scss';
 
+.home-css-wrapper {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  overflow: scroll;
+}
+
 .home-wrapper {
-  height: 934px;
+  height: 100vh;
+
+  min-height: 550px;
+  max-height: 1200px;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  padding: 25px 0;
+
+  @include m {
+    padding-top: 35px;
+  }
 }
 
-.nav {
+.head {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin: 25px 50px;
-
   height: 30px;
+
+  @include m {
+  }
 }
 
-.nav-title {
+.head-title {
   display: flex;
 
   gap: 20px;
 
   p {
-    font-family: 'Major Mono Display';
+    font-family: $font-portfolio;
     font-size: 20px;
+
+    @include m {
+      font-size: 16px;
+    }
   }
 }
 
@@ -33,7 +57,7 @@
   flex-direction: column;
   justify-content: center;
 
-  height: 855px;
+  gap: 70px;
 }
 
 .main-container {
@@ -41,50 +65,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  height: 100%;
-}
-
-.home-title-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.home-title {
-  font-family: 'Cormorant Garamond';
-  font-size: 120px;
-  font-weight: 500;
-  font-weight: 200;
 }
 
 .button {
-  background-color: #fcfaf800;
-  font-size: 120px;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  padding: 0 20px;
+
+  background-color: #fcfaf800;
+
+  font-family: $font-copyright;
+  font-weight: 200;
+  font-size: 120px;
   line-height: 110px;
   letter-spacing: -8px;
 
-  &.menu {
-    font-family: 'Host Grotesk';
-    font-weight: 400;
+  overflow: hidden;
 
-    &:hover {
-      transition: 0.6s;
-      font-weight: 500;
-    }
-
-    &.gallery {
-      pointer-events: none;
-      opacity: 0.2;
-    }
+  &:hover {
+    transition: 0.6s;
+    font-weight: 300;
   }
-}
 
-.button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include m {
+    font-size: 70px;
+    line-height: 70px;
+  }
 }
 
 .menu-wrapper {
@@ -94,16 +102,6 @@
   position: relative;
 }
 
-.circle {
-  position: absolute;
-  top: 200px;
-
-  width: 400px;
-  height: 90px;
-
-  z-index: 2;
-}
-
 .line-lottie {
   position: absolute;
   width: 600px;
@@ -111,6 +109,12 @@
   z-index: -1;
 
   top: 90px;
+
+  @include m {
+    width: 280px;
+
+    top: 60px;
+  }
 }
 
 .footer-container {
@@ -118,5 +122,35 @@
   justify-content: center;
   gap: 30px;
 
-  padding: 30px 50px;
+  @include m {
+    display: grid;
+
+    grid-template-areas:
+      'based based'
+      'name year';
+
+    gap: 5px;
+  }
+}
+
+.footer {
+  font-family: $font-copyright;
+  font-size: 16px;
+
+  &.based {
+    grid-area: based;
+  }
+
+  &.name {
+    grid-area: name;
+  }
+
+  &.year {
+    grid-area: year;
+    text-align: end;
+  }
+
+  @include m {
+    font-size: 12px;
+  }
 }

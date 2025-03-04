@@ -6,28 +6,65 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
+
 .modal-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   width: 1200px;
+  height: 100%;
+
+  @include xl {
+    width: 900px;
+  }
+
+  @include l {
+    width: 700px;
+  }
+
+  @include m {
+    justify-content: center;
+  }
 }
 
 .modal-image {
+  max-width: 1000px;
+  max-height: 800px;
+
   width: auto;
+  height: auto;
 
   border-radius: 5px;
+
+  object-fit: contain;
+  aspect-ratio: auto;
+
+  box-shadow: 0px 0px 10px rgba(144, 144, 144, 0.5);
+
+  @include xl {
+    max-width: 750px;
+    max-height: 700px;
+  }
+
+  @include l {
+    max-width: 580px;
+    max-height: 700px;
+  }
+
+  @include m {
+    max-width: calc(100vw - 30px);
+    max-height: calc(100vh - 30px);
+  }
 }
 
 .image-container {
-  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,26 +79,81 @@
   width: 40px;
   height: 40px;
 
-  &:hover {
-    transition: 0.5s;
-    transform: scale(1.05);
+  z-index: 999;
+
+  &:hover .prev-button {
+    transform: translateX(-2px);
+    transition: transform 0.3s ease;
+
+    @include xl {
+      transform: translateX(0);
+    }
+  }
+
+  &:hover .next-button {
+    transform: translateX(2px);
+    transition: transform 0.3s ease;
+
+    @include xl {
+      transform: translateX(0);
+    }
+  }
+
+  @include xl {
+    width: 35px;
+    height: 35px;
+  }
+
+  @include m {
+    position: fixed;
+
+    width: 30px;
+    height: 30px;
+
+    &.prev {
+      left: 25px;
+      bottom: 25px;
+    }
+
+    &.next {
+      right: 25px;
+      bottom: 25px;
+    }
   }
 }
 
 .prev-button {
   position: relative;
-  right: 3px;
+  right: 2px;
 
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+
+  @include xl {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include m {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .next-button {
   position: relative;
-  left: 3px;
+  left: 1px;
 
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 
-  transform: rotate(180deg);
+  @include xl {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include m {
+    width: 18px;
+    height: 18px;
+  }
 }

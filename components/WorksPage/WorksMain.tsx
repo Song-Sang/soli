@@ -1,13 +1,14 @@
 import styles from './WorksMain.module.scss';
 import classNames from 'classnames/bind';
-import Slider, { Settings } from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import ArtworkPerformance from './MainTopic/ArtworkPerformance';
 import StageCostume from './MainTopic/StageCostume';
 import Image from 'next/image';
 import arrowImg from '@/public/images/icon/arrow.svg';
+import NavBar from '../NavBar/NavBar';
+import Lottie from 'react-lottie-player';
+import swipeLottie from '@/public/lottie/swipe.json';
+import { useProjectScroll } from '../../utils/useProjectScroll';
 
 const cx = classNames.bind(styles);
 
@@ -17,70 +18,103 @@ interface ArrowProps {
 
 function NextArrow({ onClick }: ArrowProps) {
   return (
-    <button onClick={onClick} className={cx('arrow-button')}>
-      other category
-      <Image
-        src={arrowImg}
-        alt="화살표"
-        width={20}
-        height={20}
-        className={cx('arrowImg')}
-      />
-    </button>
+    <div className={cx('projects-nav')}>
+      <p className={cx('projects-subject')}>[ Stage • Costume ]</p>
+      <button onClick={onClick} className={cx('arrow-button')}>
+        other category
+        <Image
+          src={arrowImg}
+          alt="화살표"
+          width={20}
+          height={20}
+          className={cx('arrowImg')}
+        />
+      </button>
+    </div>
   );
 }
 
 function PrevArrow({ onClick }: ArrowProps) {
   return (
-    <button onClick={onClick} className={cx('arrow-button')}>
-      <Image
-        src={arrowImg}
-        alt="화살표"
-        width={20}
-        height={20}
-        className={cx('arrowImg', 'reverse')}
-      />
-      other category
-    </button>
+    <div className={cx('projects-nav')}>
+      <p className={cx('projects-subject')}>[ Artwork • Performance ]</p>
+      <button onClick={onClick} className={cx('arrow-button')}>
+        <Image
+          src={arrowImg}
+          alt="화살표"
+          width={20}
+          height={20}
+          className={cx('arrowImg', 'reverse')}
+        />
+        other category
+      </button>
+    </div>
   );
 }
 
 export default function WorksMain() {
-  const sliderRef = useRef<Slider>(null);
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  const totalSlides = 2;
+  const { slideRefs, hasScroll, endScroll } = useProjectScroll(currentSlide);
 
-  const settings: Settings = {
-    slidesToShow: 1,
-    infinite: false,
-    slidesToScroll: 1,
-    arrows: false,
-    speed: 2000,
-    afterChange: (current: number) => {
-      setCurrentSlide(current);
-    },
+  const handleNext = () => {
+    if (currentSlide === 0) {
+      setCurrentSlide(currentSlide + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentSlide === 1) {
+      setCurrentSlide(currentSlide - 1);
+    }
   };
 
   return (
-    <main className={cx('worksMain-wrapper')}>
-      <div className={cx('worksMain-arrows')}>
-        <div className={cx('prev-arrow')}>
-          {currentSlide > 0 && (
-            <PrevArrow onClick={() => sliderRef.current?.slickPrev()} />
-          )}
+    <>
+      <NavBar />
+      <main className={cx('worksMain-wrapper')}>
+        {currentSlide === 1 && <PrevArrow onClick={handlePrev} />}
+        {currentSlide === 0 && <NextArrow onClick={handleNext} />}
+
+        <div
+          className={cx('slider-container')}
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          <div
+            className={cx('slide')}
+            ref={(el) => {
+              slideRefs.current[0] = el;
+            }}
+          >
+            <StageCostume />
+          </div>
+          <div
+            className={cx('slide')}
+            ref={(el) => {
+              slideRefs.current[1] = el;
+            }}
+          >
+            <ArtworkPerformance />
+          </div>
         </div>
-        <div className={cx('next-arrow')}>
-          {currentSlide < totalSlides - 1 && (
-            <NextArrow onClick={() => sliderRef.current?.slickNext()} />
-          )}
-        </div>
-      </div>
-      <div className={cx('worksMain-contents')}>
-        <Slider ref={sliderRef} {...settings}>
-          <ArtworkPerformance />
-          <StageCostume />
-        </Slider>
-      </div>
-    </main>
+        {hasScroll[0] && currentSlide === 0 && (
+          <Lottie
+            loop
+            animationData={swipeLottie}
+            play
+            className={cx('scroll-indicator', { rotate: endScroll })}
+            speed={0.3}
+          />
+        )}
+        {hasScroll[1] && currentSlide === 1 && (
+          <Lottie
+            loop
+            animationData={swipeLottie}
+            play
+            className={cx('scroll-indicator', { rotate: endScroll })}
+            speed={0.3}
+          />
+        )}
+      </main>
+    </>
   );
 }

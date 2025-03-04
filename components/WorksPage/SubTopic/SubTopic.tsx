@@ -11,28 +11,19 @@ interface SubTopicProps {
   align?: 'reverse';
 }
 
-export default function SubTopic({
-  title,
-  category,
-  summary,
-  align,
-}: SubTopicProps) {
+export default function SubTopic({ title, category, summary }: SubTopicProps) {
   const UrlCategory = category.split(',')[0].trim();
 
   return (
-    <div>
-      <Link
-        href={`/projects/${UrlCategory}/${title}`}
-        className={cx('topic-wrapper', { reverse: align === 'reverse' })}
-      >
-        <h2 className={cx('title', { reverse: align === 'reverse' })}>
-          {title}
-        </h2>
-        <div className={cx('topic-details', { reverse: align === 'reverse' })}>
-          <p className={cx('category')}>{category}</p>
-          <p className={cx('description')}>{summary}</p>
-        </div>
-      </Link>
-    </div>
+    <Link
+      href={`/projects/${UrlCategory}/${title}`}
+      className={cx('topic-wrapper')}
+    >
+      <div className={cx('title')}>{title}</div>
+      <div className={cx('topic-details')}>
+        <p className={cx('category')}>{category}</p>
+        <p className={cx('description')}>{summary}</p>
+      </div>
+    </Link>
   );
 }

@@ -6,11 +6,21 @@
   align-items: center;
 
   width: 350px;
+
+  @include xl {
+    width: 300px;
+  }
+
+  @include m {
+    width: 260px;
+  }
 }
 
 .menu {
   display: flex;
   justify-content: center;
+
+  position: relative;
 
   font-family: 'Major Mono Display';
   font-size: 18px;
@@ -19,19 +29,47 @@
 
   &:hover {
     font-size: 20px;
+
+    @include xl {
+      font-size: 18px;
+    }
+
+    @include m {
+      font-size: 16px;
+    }
+  }
+
+  @include xl {
+    font-size: 16px;
+    width: 100px;
   }
 }
 
 .highlight {
-  &:hover {
+  font-size: 20px;
+
+  @include xl {
     font-size: 18px;
+  }
+
+  @include m {
+    font-size: 16px;
   }
 }
 
 .line-lottie {
   position: absolute;
-  top: 38px;
+  top: 8px;
 
   width: 120px;
   height: auto;
+
+  @include xl {
+    width: 110px;
+  }
+
+  @include m {
+    top: 5px;
+    width: 90px;
+  }
 }

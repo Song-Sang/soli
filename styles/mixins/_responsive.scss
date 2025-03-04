@@ -1,17 +1,23 @@
-@mixin laptop {
+@mixin xxl {
+  @media (max-width: #{$xxl-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin xl {
   @media (max-width: #{$xl-breakpoint}) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media (max-width: #{$lg-breakpoint}) {
+@mixin l {
+  @media (max-width: #{$l-breakpoint}) {
     @content;
   }
 }
 
-@mixin mobile {
-  @media (max-width: #{$md-breakpoint}) {
+@mixin m {
+  @media (max-width: #{$m-breakpoint}) {
     @content;
   }
 }

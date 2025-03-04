@@ -18,30 +18,30 @@ export default function People({ workData, onClick }: PeoPleProps) {
     <>
       <div className={cx('wrapper')}>
         <div className={cx('info-wrapper')}>
-          <h2 className={cx('section-title')}>Info.</h2>
+          <h2 className={cx('section-title')}>Info</h2>
           <div className={cx('info-container')}>
             <div className={cx('info-detail-wrapper', 'photo-video')}>
               <div>
-                <p className={cx('detail', 'title')}>[PHOTO.]</p>
+                <p className={cx('detail', 'title')}>[PHOTO]</p>
                 <p className={cx('detail')}>
                   {workData?.people.photo ? workData.people.photo : '-'}
                 </p>
               </div>
               <div className={cx('video')}>
-                <p className={cx('detail', 'title')}>[VIDEO.]</p>
+                <p className={cx('detail', 'title')}>[VIDEO]</p>
                 <p className={cx('detail')}>
                   {workData?.people.video ? workData.people.video : '-'}
                 </p>
               </div>
             </div>
             <div className={cx('info-detail-wrapper')}>
-              <p className={cx('detail', 'title')}>[PROJECT MEMBER.]</p>
+              <p className={cx('detail', 'title')}>[PROJECT MEMBER]</p>
               <p className={cx('detail')}>
                 {workData?.people.crew.map((crew) => `${crew}`).join(' • ')}
               </p>
             </div>
             <div className={cx('info-detail-wrapper')}>
-              <p className={cx('detail', 'title')}>[EXHIBITION PERIOD.]</p>
+              <p className={cx('detail', 'title')}>[EXHIBITION PERIOD]</p>
               <div className={cx('schedule')}>
                 {workData?.schedule.map((item, index) => (
                   <div
@@ -62,10 +62,10 @@ export default function People({ workData, onClick }: PeoPleProps) {
         </div>
 
         <div className={cx('role-wrapper')}>
-          <h2 className={cx('section-title')}>Role.</h2>
+          <h2 className={cx('section-title')}>Role</h2>
           <div className={cx('role-container')}>
             <div className={cx('role-detail-wrapper')}>
-              <p className={cx('detail', 'role-title')}>[{workData?.role}.]</p>
+              <p className={cx('detail', 'role-title')}>[{workData?.role}]</p>
               <p className={cx('detail', 'role-name')}>- Soli Jang -</p>
             </div>
             <div className={cx('icons')}>
