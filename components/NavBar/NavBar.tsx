@@ -12,6 +12,7 @@ export default function NavBar() {
   const [titleVisible, setTitleVisible] = useState(true);
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [lottiePaly, setLottiePlay] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [segments, setSegments] = useState<any>([0, 37]);
 
   const handleMenuButton = () => {
