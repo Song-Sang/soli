@@ -14,11 +14,6 @@
     color: #fff;
   }
 
-  &:focus {
-    background-color: #000;
-    color: #fff;
-  }
-
   @media (hover: none) {
     &:hover {
       background-color: #fcfaf8;
@@ -31,6 +26,11 @@
   }
 
   @include xl {
+    &.select {
+      background-color: #000;
+      color: #fff;
+    }
+
     flex-direction: column;
 
     gap: 0px;
