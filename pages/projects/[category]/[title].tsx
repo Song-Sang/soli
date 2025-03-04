@@ -11,7 +11,7 @@ import TopScrollButton from '../../../components/TopScrollButton/TopScrollButton
 import { copyURL } from '@/utils/copyURL';
 import Modal from '../../../components/Modal/Modal';
 import useModalStore from '../../../store/useModalStore';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export default function WorkPage({ workData }: WorkPageProps) {
-  const images = workData?.images || [];
+  const images = useMemo(() => workData?.images || [], [workData]);
 
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
@@ -102,7 +102,7 @@ export default function WorkPage({ workData }: WorkPageProps) {
 
     images.forEach((image) => {
       const img = new Image();
-      img.src = image; // 이미지 URL
+      img.src = image;
       img.onload = handleImageLoad;
       img.onerror = handleImageLoad; // 오류 발생 시에도 카운트 증가
     });
