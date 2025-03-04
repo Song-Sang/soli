@@ -120,6 +120,8 @@
   font-family: $font-main;
   font-weight: 300;
 
+  text-align: justify;
+
   @include m {
     font-size: 14px;
   }
