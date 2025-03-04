@@ -14,6 +14,13 @@
     color: #fff;
   }
 
+  @media (hover: none) {
+    &:hover {
+      background-color: #fcfaf8;
+      color: #000;
+    }
+  }
+
   @include xxl {
     padding: 0 60px;
   }

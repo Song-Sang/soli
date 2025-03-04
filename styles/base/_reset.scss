@@ -41,6 +41,10 @@ input,
 select,
 textarea {
   border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 
   &:focus {
     outline: none;
@@ -51,6 +55,7 @@ textarea {
 a,
 button {
   cursor: pointer;
+  color: #000;
   padding: 0;
 }
 
