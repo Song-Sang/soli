@@ -57,6 +57,11 @@ button {
   cursor: pointer;
   color: #000;
   padding: 0;
+
+  &:disabled {
+    background-color: #8b8b8b9b;
+    color: #666666;
+  }
 }
 
 ul,
