@@ -36,6 +36,12 @@
     transform: scale(1.02);
   }
 
+  @media (hover: none) {
+    &:hover {
+      transform: none;
+    }
+  }
+
   @include xl {
     font-size: 22px;
   }

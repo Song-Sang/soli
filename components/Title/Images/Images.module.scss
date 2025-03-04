@@ -82,6 +82,16 @@
       filter: grayscale(0%);
     }
 
+    @media (hover: none) {
+      &:hover {
+        transform: none;
+      }
+    }
+
+    @include xl {
+      filter: grayscale(0%);
+    }
+
     @include m {
       margin-left: 0px;
       margin-top: 15px;

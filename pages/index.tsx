@@ -3,21 +3,23 @@ import classNames from 'classnames/bind';
 import Lottie from 'react-lottie-player';
 import LineLottie from '@/public/lottie/home-line-animation.json';
 import { useState } from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const cx = classNames.bind(styles);
 
 export default function Home() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [isStopped, setIsStopped] = useState(false);
+  const [currentPath, setCurrentPath] = useState('');
+  const [lottiePlay, setLottiePlay] = useState(false);
 
-  const handleMouseEnter = (index: number) => {
-    setHoveredIndex(index);
-  };
+  const router = useRouter();
 
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
-    setIsStopped(false);
+  const handleLinkClick = (path: string) => {
+    setLottiePlay(true);
+    setCurrentPath(path);
+
+    setTimeout(() => {
+      router.push(path);
+    }, 1000);
   };
 
   const menuItems = [
@@ -40,21 +42,19 @@ export default function Home() {
           <main className={cx('main-container')}>
             {menuItems.map((item, index) => (
               <div key={index} className={cx('menu-wrapper')}>
-                <Link
-                  href={item.path}
+                <button
                   className={cx('button')}
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
+                  onClick={() => handleLinkClick(item.path)}
                 >
                   {item.label}
-                </Link>
-                {hoveredIndex === index && (
+                </button>
+                {currentPath === item.path && (
                   <Lottie
-                    play={!isStopped}
+                    play={lottiePlay}
                     loop={false}
                     animationData={LineLottie}
                     className={cx('line-lottie')}
-                    onComplete={() => setIsStopped(true)}
+                    onComplete={() => setLottiePlay(false)}
                   />
                 )}
               </div>
