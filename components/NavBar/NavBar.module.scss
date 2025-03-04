@@ -10,7 +10,7 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
 
   @include xl {
-    padding: 25px 40px;
+    padding: 25px 30px;
   }
 
   @include m {
@@ -19,8 +19,17 @@
 }
 
 .home-title {
+  position: relative;
+
   font-family: $font-portfolio;
   font-size: 25px;
+  transition: transform 0.5s ease;
+
+  &.disable {
+    @include m {
+      transform: translateY(-35px);
+    }
+  }
 
   &:hover {
     transition: 0.1s;
@@ -33,5 +42,43 @@
 
   @include m {
     font-size: 16px;
+  }
+}
+
+.nav-menu {
+  @include m {
+    display: none;
+  }
+}
+
+.nav-menu-mobile {
+  display: none;
+
+  @include m {
+    display: block;
+
+    position: absolute;
+    top: -30px;
+    left: 20px;
+
+    transition: transform 0.5s ease;
+
+    &.able {
+      transform: translateY(35px);
+      top: -18px;
+    }
+  }
+}
+
+.hamburger-lottie {
+  display: none;
+
+  background-color: #fcfaf8;
+
+  width: 30px;
+  height: 30px;
+
+  @include m {
+    display: block;
   }
 }

@@ -9,6 +9,7 @@
 
 .main-wrapper {
   display: flex;
+
   justify-content: center;
   align-items: center;
 
@@ -19,45 +20,69 @@
   @include l {
     padding: 30px;
   }
+
+  @include m {
+    padding: 30px 0;
+  }
 }
 
 .main {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
 
-  gap: 150px;
+  grid-template-areas:
+    'title divider inputForm'
+    'description divider inputForm';
+
+  column-gap: 150px;
 
   @include xl {
-    flex-direction: column;
-    gap: 20px;
+    grid-template-areas:
+      'title '
+      'divider'
+      'inputForm'
+      'description';
+
+    row-gap: 20px;
   }
 }
 
 .description-container {
+  grid-area: description;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
-  height: 720px;
+  justify-content: flex-end;
 
   @include xl {
     height: 100%;
+
+    padding: 30px 0;
+
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #b7b7b7;
+  }
+
+  @include m {
   }
 }
 
 .title {
+  grid-area: title;
+
   font-family: $font-title;
   font-size: 100px;
   font-weight: 400;
 
   @include xl {
     text-align: center;
-
-    border-bottom: 1px solid #b7b7b7;
   }
 
   @include l {
     font-size: 80px;
+  }
+
+  @include m {
+    font-size: 60px;
   }
 }
 
@@ -88,7 +113,6 @@
   @include xl {
     text-align: center;
 
-    margin-top: 20px;
     margin-bottom: 20px;
   }
 
@@ -98,6 +122,8 @@
 }
 
 .info {
+  display: flex;
+  align-items: center;
   font-family: $font-copyright;
   font-size: 18px;
 
@@ -113,6 +139,10 @@
 
   @include l {
     font-size: 16px;
+  }
+
+  @include m {
+    font-size: 15px;
   }
 }
 
@@ -149,6 +179,8 @@
 }
 
 .divider {
+  grid-area: divider;
+
   width: 1px;
 
   background-color: #b7b7b7;
@@ -157,4 +189,12 @@
     width: 100%;
     height: 1px;
   }
+
+  @include m {
+    order: 3;
+  }
+}
+
+.input-form {
+  grid-area: inputForm;
 }

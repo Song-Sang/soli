@@ -15,8 +15,8 @@ export default function Contact() {
       <NavBar />
       <div className={cx('main-wrapper')}>
         <main className={cx('main')}>
+          <h1 className={cx('title')}>CONTACT</h1>
           <section className={cx('description-container')}>
-            <h1 className={cx('title')}>CONTACT</h1>
             <div className={cx('info-container')}>
               <h2 className={cx('info-title')}>direct contact</h2>
               <p className={cx('info', 'email')}>941227_@naver.com</p>
@@ -46,7 +46,9 @@ export default function Contact() {
 
           <div className={cx('divider')}></div>
 
-          <InputForm />
+          <div className={cx('input-form')}>
+            <InputForm />
+          </div>
         </main>
       </div>
     </div>

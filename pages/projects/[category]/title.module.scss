@@ -10,6 +10,10 @@
   @include l {
     gap: 60px;
   }
+
+  @include m {
+    gap: 30px;
+  }
 }
 
 .description-section {
@@ -24,6 +28,10 @@
   @include l {
     width: 768px;
   }
+
+  @include m {
+    width: 375px;
+  }
 }
 
 .title {
@@ -36,18 +44,27 @@
   height: 350px;
 
   padding: 0 20px;
+
+  @include m {
+    height: 200px;
+  }
 }
 
 .title-word {
   text-transform: uppercase;
 
   font-family: $font-title;
-  line-height: 90px;
   font-size: 90px;
+  line-height: 90px;
   font-weight: 800;
 
   @include l {
     font-size: 80px;
+  }
+
+  @include m {
+    font-size: 50px;
+    line-height: 50px;
   }
 }
 
@@ -59,6 +76,11 @@
 
   width: 700px;
   height: 120px;
+
+  @include m {
+    width: 100%;
+    height: 100px;
+  }
 }
 
 .category {
@@ -66,11 +88,19 @@
   font-size: 22px;
 
   border-bottom: 1px solid #b7b7b7;
+
+  @include m {
+    font-size: 20px;
+  }
 }
 
 .summary {
   font-size: 22px;
   font-family: $font-copyright;
+
+  @include m {
+    font-size: 12px;
+  }
 }
 
 .content {
@@ -79,12 +109,20 @@
   gap: 20px;
 
   width: 500px;
+
+  @include m {
+    width: 100%;
+  }
 }
 
 .content-word {
   font-size: 18px;
   font-family: $font-main;
   font-weight: 300;
+
+  @include m {
+    font-size: 14px;
+  }
 }
 
 .circle-lottie {
@@ -94,6 +132,12 @@
 
   position: absolute;
   left: -200px;
+
+  @include m {
+    width: 200px;
+
+    left: -70px;
+  }
 }
 
 .footer {
@@ -110,6 +154,10 @@
     font-size: 16px;
     font-family: $font-copyright;
     font-weight: 300;
+
+    @include m {
+      font-size: 14px;
+    }
   }
 
   .year {
@@ -118,5 +166,13 @@
 
   @include l {
     width: 768px;
+  }
+
+  @include m {
+    flex-direction: column;
+    gap: 5px;
+
+    width: 375px;
+    margin-top: 50px;
   }
 }

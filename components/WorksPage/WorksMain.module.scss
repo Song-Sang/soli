@@ -14,7 +14,7 @@
   }
 
   @include m {
-    height: calc(100vh - 38px);
+    height: calc(100vh - 50px);
   }
 }
 
@@ -54,7 +54,7 @@
   }
 
   @include m {
-    max-height: calc(100vh - 168px);
+    max-height: calc(100vh - 180px);
   }
 }
 
