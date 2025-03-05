@@ -51,10 +51,10 @@
   padding: 20px 0;
 
   &.original {
-    animation: 50s linear infinite normal none running infiniteAnimation1;
+    animation: linear infinite normal none running infiniteAnimation1;
 
     @include m {
-      animation: 50s linear infinite normal none running infiniteAnimation3;
+      animation: linear infinite normal none running infiniteAnimation3;
     }
   }
   &.clone {
@@ -130,7 +130,7 @@
   @include l {
     width: 728px;
 
-    top: 85px;
+    top: 105px;
   }
 
   @include m {

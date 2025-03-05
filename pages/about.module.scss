@@ -2,102 +2,404 @@
 
 .wrapper {
   display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  height: 100vh;
+}
+
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-}
+  align-items: center;
+  gap: 100px;
 
-.title {
-  font-family: 'schoolBell';
-  font-size: 60px;
-  line-height: 60px;
-}
+  max-width: 900px;
 
-.subtitle {
-  font-family: 'Host Grotesk';
-  font-weight: 100;
-  font-size: 30px;
+  margin: 70px auto auto;
+
+  @include l {
+    max-width: 768px;
+
+    margin: 50px auto auto;
+    padding: 0 40px;
+
+    gap: 60px;
+  }
+
+  @include m {
+    max-width: 400px;
+
+    margin: 30px auto auto;
+    padding: 0 20px;
+
+    gap: 30px;
+  }
 }
 
 .profile-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
-  gap: 70px;
+  width: 100%;
 
-  margin: 50px auto;
+  gap: 50px;
 
-  width: 850px;
+  @include l {
+    gap: 30px;
+  }
+
+  @include m {
+    gap: 20px;
+  }
 }
 
-.main-container {
+.title-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
 
-  gap: 70px;
-}
+  padding-bottom: 30px;
 
-.introduction {
-  font-family: 'Host Grotesk';
-  font-size: 16px;
+  border-bottom: 1px solid;
 
-  margin-top: 10px;
-}
+  @include m {
+    flex-direction: column;
+    align-items: center;
 
-.info-description-container {
-  display: flex;
-
-  gap: 170px;
-
-  border-top: 1px solid;
-
-  padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .info-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas:
+    'name number'
+    'location mail';
 
-  gap: 25px;
+  column-gap: 60px;
+
+  height: 50px;
+
+  @include l {
+    column-gap: 30px;
+  }
+
+  @include m {
+    grid-template-areas:
+      'name'
+      'location'
+      'number'
+      ' mail';
+
+    height: 100%;
+
+    padding-top: 10px;
+  }
 }
 
 .info-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
-  gap: 8px;
+  width: 200px;
+
+  &.name {
+    grid-area: name;
+  }
+  &.location {
+    grid-area: location;
+  }
+  &.number {
+    grid-area: number;
+  }
+  &.mail {
+    grid-area: mail;
+  }
+
+  @include l {
+    width: 180px;
+  }
 }
 
 .info-label {
-  font-family: 'Scope One';
-  font-size: 20px;
-  font-weight: 800;
+  font-family: $font-copyright;
+  font-size: 16px;
+  font-weight: 600;
 
-  line-height: 20px;
+  @include l {
+    font-size: 14px;
+  }
 }
 
 .info-detail {
-  font-family: 'schoolBell';
+  font-family: $font-main;
+  font-size: 16px;
 
-  padding-left: 5px;
+  @include l {
+    font-size: 14px;
+  }
+}
+
+.title {
+  font-family: $font-title;
+  font-size: 100px;
+  font-weight: 400;
+
+  line-height: 80px;
+
+  text-align: center;
+
+  @include m {
+    font-size: 70px;
+    line-height: 60px;
+  }
+}
+
+.subtitle {
+  font-family: $font-copyright;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.main-container {
+  display: grid;
+
+  grid-template-areas:
+    'image description'
+    'introduction introduction';
+
+  row-gap: 50px;
+  column-gap: 50px;
+
+  width: 100%;
+
+  @include l {
+    row-gap: 30px;
+    column-gap: 30px;
+  }
+
+  @include m {
+    grid-template-areas:
+      'image '
+      'description'
+      'introduction';
+
+    row-gap: 20px;
+  }
+}
+
+.description-wrapper {
+  grid-area: description;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px;
+
+  margin: auto;
+
+  @include m {
+    border-top: 1px solid;
+
+    padding-top: 20px;
+  }
+}
+
+.description-title {
+  font-size: 30px;
+  font-family: $font-title;
+
+  @include m {
+    text-align: center;
+  }
 }
 
 .description-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-
-  p {
-    font-size: 16px;
-  }
+  gap: 25px;
 }
 
-.highlight {
-  font-family: 'oswald';
+.description {
+  width: 100%;
 
-  &.introduction {
-    font-size: 24px;
+  font-family: $font-main;
+  font-size: 16px;
+  text-align: justify;
+
+  @include l {
+    font-size: 14px;
   }
 }
 
 .profile-image {
+  grid-area: image;
+
   filter: grayscale(100);
+
+  width: auto;
+  height: 530px;
+
+  margin: auto;
+
+  @include l {
+    height: 450px;
+  }
+
+  @include m {
+    height: 300px;
+  }
+}
+
+.introduction-wrapper {
+  grid-area: introduction;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  @include m {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+}
+
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  max-width: 550px;
+
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+
+  @include l {
+    max-width: 450px;
+  }
+
+  @include m {
+    max-width: 100%;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.introduction {
+  font-family: $font-main;
+  font-size: 18px;
+  text-align: justify;
+
+  @include l {
+    font-size: 16px;
+  }
+}
+
+.contact {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+
+  @include m {
+    border-top: 0px;
+
+    padding-top: 0px;
+    padding-bottom: 20px;
+
+    gap: 30px;
+  }
+}
+
+.contact-title {
+  font-size: 30px;
+  font-family: $font-title;
+
+  text-align: end;
+
+  @include m {
+    text-align: center;
+  }
+}
+
+.contact-icon {
+  height: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding: 0 5px;
+
+  button {
+    background-color: #fff;
+  }
+
+  a {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+.social-copy {
+  display: flex;
+
+  gap: 20px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  p {
+    font-size: 16px;
+    font-family: $font-copyright;
+    font-weight: 300;
+
+    @include m {
+      font-size: 14px;
+    }
+  }
+
+  .year {
+    font-weight: 300;
+  }
+
+  @include m {
+    flex-direction: column;
+    gap: 5px;
+
+    margin-top: 30px;
+  }
 }
