@@ -40,11 +40,11 @@ export default function Works() {
               </div>
               <div className={cx('info-container', 'number')}>
                 <p className={cx('info-label')}>[number]</p>
-                <p className={cx('info-detail')}>+82) 10-5663-3520</p>
+                <p className={cx('info-detail')}>+49) 17643404489</p>
               </div>
               <div className={cx('info-container', 'mail')}>
                 <p className={cx('info-label')}>[mail]</p>
-                <p className={cx('info-detail')}>941227_@naver.com</p>
+                <p className={cx('info-detail')}>solijang.art @ gmail.com</p>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function Works() {
                   <div className={cx('social-copy')}>
                     <div className={cx('icon')}>
                       <a
-                        href="https://www.instagram.com/sol_2_jang"
+                        href="https://www.instagram.com/solijang.art"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
