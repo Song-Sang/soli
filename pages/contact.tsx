@@ -19,15 +19,15 @@ export default function Contact() {
           <section className={cx('description-container')}>
             <div className={cx('info-container')}>
               <h2 className={cx('info-title')}>direct contact</h2>
-              <p className={cx('info', 'email')}>941227_@naver.com</p>
-              <p className={cx('info', 'phone')}>+82 010 5663 3520</p>
+              <p className={cx('info', 'email')}>solijang.art @ gmail.com</p>
+              <p className={cx('info', 'phone')}>+49) 17643404489</p>
 
               <div className={cx('icon-container')}>
                 <div className={cx('icon')} onClick={copyURL}>
                   <Image src={urlImg} alt="url 아이콘" width={30} height={30} />
                 </div>
                 <a
-                  href="https://www.instagram.com/sol_2_jang"
+                  href="https://www.instagram.com/solijang.art"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

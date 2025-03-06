@@ -72,7 +72,7 @@ export default function People({ workData, onClick }: PeoPleProps) {
               <div className={cx('social-copy')}>
                 <div className={cx('icon')}>
                   <a
-                    href="https://www.instagram.com/sol_2_jang"
+                    href="https://www.instagram.com/solijang.art"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
