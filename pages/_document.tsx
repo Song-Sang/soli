@@ -21,6 +21,7 @@ export default function Document() {
           crossOrigin="anonymous"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
         />
+        <title>SOLI-JANG / PORTFOLIO</title>
       </Head>
       <body style={{ fontFamily: 'Oswald, sans-serif' }}>
         <Main />
