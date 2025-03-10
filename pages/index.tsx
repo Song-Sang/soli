@@ -35,7 +35,7 @@ export default function Home() {
           <div className={cx('head-title')}>
             <p>scenoGRApheR</p>
             <p>•</p>
-            <p>poRtfolio</p>
+            <p>soli-jang</p>
           </div>
         </h1>
         <div className={cx('home-container')}>
@@ -61,8 +61,8 @@ export default function Home() {
             ))}
           </main>
           <footer className={cx('footer-container')}>
+            <p className={cx('footer', 'name')}>SOLI-JANG</p>
             <p className={cx('footer', 'based')}>BASED IN BERLIN, GERMANY</p>
-            <p className={cx('footer', 'name')}>Soli-Jang</p>
             <p className={cx('footer', 'year')}>@2023-2025</p>
           </footer>
         </div>
