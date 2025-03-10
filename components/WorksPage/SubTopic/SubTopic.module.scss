@@ -26,17 +26,17 @@
   }
 
   @include xl {
-    &.select {
-      background-color: #000;
-      color: #fff;
-    }
-
     flex-direction: column;
 
     gap: 0px;
 
     border-top: 1px dashed;
     padding: 9px 35px 10px;
+
+    &.select {
+      background-color: #000;
+      color: #fff;
+    }
   }
 
   @include m {

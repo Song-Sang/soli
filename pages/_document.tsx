@@ -12,8 +12,14 @@ export default function Document() {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Scope+One&family=Major+Mono+Display&family=Oswald:wght@200..700&family=Schoolbell&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Major+Mono+Display&family=Manuale:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          as="style"
+          crossOrigin="anonymous"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
         />
       </Head>
       <body style={{ fontFamily: 'Oswald, sans-serif' }}>
