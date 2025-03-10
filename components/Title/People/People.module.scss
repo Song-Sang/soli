@@ -145,6 +145,10 @@
   border-bottom: 1px solid #b7b7b7;
 
   @include l {
+    width: 200px;
+  }
+
+  @include m {
     width: 100%;
   }
 }
