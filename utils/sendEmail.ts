@@ -1,9 +1,9 @@
 import { toast } from 'react-toastify';
 import emailjs from '@emailjs/browser';
 
-const EMAIL_SERVICE_ID = 'sshk0123@gmail.com';
-const EMAIL_TEMPLATE_ID = 'template_9z1zrke';
-const EMAIL_PUBLIC_KEY = 'h1j74hFEHN8pIa52V';
+const EMAIL_SERVICE_ID = 'solijang.art@gmail.com';
+const EMAIL_TEMPLATE_ID = 'template_a5jrpda';
+const EMAIL_PUBLIC_KEY = '4sxm1bpHXvybwdGyt';
 
 export const sendEmail = async (formElement: HTMLFormElement) => {
   try {
