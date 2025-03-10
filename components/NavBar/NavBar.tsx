@@ -35,7 +35,7 @@ export default function NavBar() {
   return (
     <nav className={cx('nav-container')}>
       <Link href="/" className={cx('home-title', { disable: !titleVisible })}>
-        poRtfolio
+        soli-jang
       </Link>
       <div className={cx('nav-menu')}>
         <NavMenu />

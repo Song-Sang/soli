@@ -49,9 +49,9 @@
   align-items: center;
 
   font-family: $font-title;
-  font-size: 110px;
+  font-size: 105px;
   font-weight: 400;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
 
   line-height: 90px;
 
@@ -71,9 +71,11 @@
   }
 
   @include m {
-    font-size: 40px;
+    font-size: 35px;
 
     line-height: 40px;
+
+    letter-spacing: 0px;
   }
 }
 
