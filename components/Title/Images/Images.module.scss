@@ -12,6 +12,7 @@
 
   @include m {
     width: 100%;
+    max-width: 500px;
 
     padding: 0 20px 10px;
   }
@@ -47,7 +48,6 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  position: relative;
   padding: 20px 0;
 
   &.original {
@@ -115,6 +115,7 @@
 
   @include m {
     width: 100%;
+    max-width: 500px;
     height: auto;
   }
 }
@@ -125,18 +126,24 @@
   z-index: -999;
 
   position: absolute;
-  top: 42px;
+
+  top: 41px;
+
+  svg {
+    @include m {
+      height: 300px !important;
+    }
+  }
 
   @include l {
-    width: 728px;
-
     top: 107px;
+    width: 728px;
   }
 
   @include m {
-    width: 335px;
+    width: calc(100% - 40px);
 
-    top: 278px;
+    top: 221px;
   }
 }
 
