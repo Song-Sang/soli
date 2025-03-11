@@ -1,20 +1,21 @@
-type People = {
-  crew: string[];
-  regie?: string[];
-  schauspieler?: string[];
-  production?: string[];
-  video?: string;
-  photo?: string;
-};
+interface Productions {
+  role: string;
+  names: string[];
+}
+
+interface Performers {
+  role: string;
+  names: string[];
+}
 
 type WORKS_DATA_INNER = {
   title: string;
   summary: string;
   category: string;
   content: string[];
-  role: string[];
-  people: People;
-  video?: string;
+  roles: string[];
+  productions: Productions[];
+  performers?: Performers[];
   photo?: string;
   schedule: {
     date: string;

@@ -80,7 +80,7 @@ export default function InputForm() {
                 className={cx('input')}
                 type="text"
                 name="phone"
-                placeholder=" phone"
+                placeholder=" Phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />

@@ -131,7 +131,7 @@
 .info-label {
   font-family: $font-copyright;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
 
   @include l {
     font-size: 14px;
@@ -306,7 +306,7 @@
   text-align: justify;
 
   @include l {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 

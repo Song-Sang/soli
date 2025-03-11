@@ -15,43 +15,77 @@ interface PeoPleProps {
 
 export default function People({ workData, onClick }: PeoPleProps) {
   return (
-    <>
-      <div className={cx('wrapper')}>
-        <div className={cx('info-wrapper')}>
-          <h2 className={cx('section-title')}>Info</h2>
-          <div className={cx('info-container')}>
-            <div className={cx('info-detail-wrapper', 'photo-video')}>
-              <div>
-                <p className={cx('detail', 'title')}>[PHOTO]</p>
-                <p className={cx('detail')}>
-                  {workData?.people.photo ? workData.people.photo : '-'}
-                </p>
-              </div>
-              <div className={cx('video')}>
-                <p className={cx('detail', 'title')}>[VIDEO]</p>
-                <p className={cx('detail')}>
-                  {workData?.people.video ? workData.people.video : '-'}
-                </p>
-              </div>
+    <div className={cx('wrapper')}>
+      <div className={cx('role-wrapper')}>
+        <h2 className={cx('section-title', 'role')}>ROLE</h2>
+        <div className={cx('role-container')}>
+          <div className={cx('detail-container')}>
+            <h3 className={cx('semi-title')}>[MAIN ROLE]</h3>
+            <div className={cx('role-item-container')}>
+              {workData?.roles.map((role, index) => (
+                <div key={index} className={cx('my-role-item')}>
+                  <p className={cx('detail')}>{role}</p>
+                  <p className={cx('detail')}>- Soli Jang -</p>
+                </div>
+              ))}
             </div>
-            <div className={cx('info-detail-wrapper')}>
-              <p className={cx('detail', 'title')}>[PROJECT MEMBER]</p>
-              <p className={cx('detail')}>
-                {workData?.people.crew.map((crew) => `${crew}`).join(' • ')}
+          </div>
+
+          <div className={cx('detail-container')}>
+            <h3 className={cx('semi-title')}>[PRODUCTION MEMBER]</h3>
+            <div className={cx('role-item-container')}>
+              {workData?.productions.map((production, index) => (
+                <div key={index} className={cx('crew-item')}>
+                  <p className={cx('detail')}>{production.role}</p>
+                  <p className={cx('detail', 'crew')}>{production.names}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {workData?.performers && (
+            <div>
+              {workData.performers.map((performer, index) => (
+                <div key={index} className={cx('detail-container')}>
+                  <h3 className={cx('semi-title')}>[{performer.role}]</h3>
+                  <p className={cx('detail', 'performer')}>
+                    {performer.names.join(' • ')}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className={cx('section-wrapper')}>
+        <div className={cx('info-wrapper')}>
+          <h2 className={cx('section-title', 'info')}>Info</h2>
+          <div className={cx('info-container')}>
+            <div className={cx('detail-container')}>
+              <h3 className={cx('semi-title')}>[PHOTO]</h3>
+              <p className={cx('detail', 'photo')}>
+                {workData?.photo ? workData.photo : '-'}
               </p>
             </div>
-            <div className={cx('info-detail-wrapper')}>
-              <p className={cx('detail', 'title')}>[EXHIBITION PERIOD]</p>
+
+            <div className={cx('detail-container')}>
+              <h3 className={cx('semi-title')}>[EXHIBITION PERIOD]</h3>
               <div className={cx('schedule')}>
                 {workData?.schedule.map((item, index) => (
-                  <div
-                    key={index}
-                    className={cx('schedule-item', {
-                      'grid-align': index % 2 !== 0,
-                    })}
-                  >
-                    <p className={cx('detail', 'date-location')}>{item.date}</p>
-                    <p className={cx('detail', 'date-location')}>
+                  <div key={index} className={cx('schedule-item')}>
+                    <p
+                      className={cx('detail', 'date-location', {
+                        'grid-align': index % 2 !== 0,
+                      })}
+                    >
+                      {item.date}
+                    </p>
+                    <p
+                      className={cx('detail', 'date-location', {
+                        'grid-align': index % 2 !== 0,
+                      })}
+                    >
                       {item.location}
                     </p>
                   </div>
@@ -61,13 +95,9 @@ export default function People({ workData, onClick }: PeoPleProps) {
           </div>
         </div>
 
-        <div className={cx('role-wrapper')}>
-          <h2 className={cx('section-title')}>Role</h2>
-          <div className={cx('role-container')}>
-            <div className={cx('role-detail-wrapper')}>
-              <p className={cx('detail', 'role-title')}>[{workData?.role}]</p>
-              <p className={cx('detail', 'role-name')}>- Soli Jang -</p>
-            </div>
+        <div className={cx('contact-wrapper')}>
+          <h2 className={cx('section-title', 'contact')}>CONTACT</h2>
+          <div className={cx('contact-container')}>
             <div className={cx('icons')}>
               <div className={cx('social-copy')}>
                 <div className={cx('icon')}>
@@ -102,6 +132,6 @@ export default function People({ workData, onClick }: PeoPleProps) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

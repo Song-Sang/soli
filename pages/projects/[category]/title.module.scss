@@ -12,7 +12,7 @@
   }
 
   @include m {
-    gap: 30px;
+    gap: 60px;
   }
 }
 
@@ -30,7 +30,7 @@
   }
 
   @include m {
-    width: 375px;
+    width: 100%;
   }
 }
 
@@ -133,12 +133,20 @@
   z-index: -999;
 
   position: absolute;
-  left: -200px;
+  left: -190px;
+
+  @include xl {
+    width: 400px;
+  }
+
+  @include l {
+    width: 350px;
+  }
 
   @include m {
     width: 200px;
 
-    left: -70px;
+    left: -90px;
   }
 }
 
@@ -174,7 +182,8 @@
     flex-direction: column;
     gap: 5px;
 
-    width: 375px;
-    margin-top: 50px;
+    width: 100%;
+
+    margin-top: 30px;
   }
 }

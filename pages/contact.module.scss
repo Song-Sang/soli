@@ -9,20 +9,20 @@
 
 .main-wrapper {
   display: flex;
-
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   flex-grow: 1;
 
-  padding: 50px;
+  padding: 50px 0;
 
-  @include l {
-    padding: 30px;
+  @include xl {
+    justify-content: space-between;
   }
 
   @include m {
-    padding: 30px 0;
+    padding: 30px 20px;
   }
 }
 
@@ -43,6 +43,10 @@
       'description';
 
     row-gap: 20px;
+  }
+
+  @include m {
+    width: 100%;
   }
 }
 
@@ -198,4 +202,35 @@
 
 .input-form {
   grid-area: inputForm;
+}
+
+.footer {
+  display: none;
+
+  margin-top: 70px;
+
+  width: 460px;
+
+  p {
+    font-size: 16px;
+    font-family: $font-copyright;
+    font-weight: 300;
+
+    @include m {
+      font-size: 14px;
+    }
+  }
+
+  .year {
+    font-weight: 300;
+  }
+
+  @include xl {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include m {
+    width: 100%;
+  }
 }
