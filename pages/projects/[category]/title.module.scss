@@ -31,6 +31,7 @@
 
   @include m {
     width: 100%;
+    max-width: 500px;
   }
 }
 
@@ -79,6 +80,7 @@
 
   @include m {
     width: 100%;
+    max-width: 500px;
     height: 100px;
   }
 }
@@ -112,6 +114,7 @@
 
   @include m {
     width: 100%;
+    max-width: 500px;
   }
 }
 
@@ -183,6 +186,7 @@
     gap: 5px;
 
     width: 100%;
+    max-width: 500px;
 
     margin-top: 30px;
   }
