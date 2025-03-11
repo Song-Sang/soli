@@ -31,19 +31,19 @@ export default function Works() {
             </div>
             <div className={cx('info-wrapper')}>
               <div className={cx('info-container', 'name')}>
-                <p className={cx('info-label')}>[name]</p>
+                <p className={cx('info-label')}>[NAME]</p>
                 <p className={cx('info-detail')}>Soli - Jang</p>
               </div>
               <div className={cx('info-container', 'location')}>
-                <p className={cx('info-label')}>[location]</p>
+                <p className={cx('info-label')}>[LOCATION]</p>
                 <p className={cx('info-detail')}>Berlin, Germany</p>
               </div>
               <div className={cx('info-container', 'number')}>
-                <p className={cx('info-label')}>[number]</p>
+                <p className={cx('info-label')}>[NUMBER]</p>
                 <p className={cx('info-detail')}>+49) 17643404489</p>
               </div>
               <div className={cx('info-container', 'mail')}>
-                <p className={cx('info-label')}>[mail]</p>
+                <p className={cx('info-label')}>[MAIL]</p>
                 <p className={cx('info-detail')}>solijang.art @ gmail.com</p>
               </div>
             </div>

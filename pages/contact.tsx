@@ -50,6 +50,10 @@ export default function Contact() {
             <InputForm />
           </div>
         </main>
+        <footer className={cx('footer')}>
+          <p>BASED IN BERLIN, GERMANY</p>
+          <p className={cx('year')}>@2023 - 2025</p>
+        </footer>
       </div>
     </div>
   );

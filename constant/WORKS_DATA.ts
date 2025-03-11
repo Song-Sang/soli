@@ -7,12 +7,9 @@ export const WORKS_DATA: WORKS_DATA = {
       summary: 'What is embodied in me?',
       category: 'performance, artwork',
       content: ['Bachelor graduation work'],
-      role: ['Installation', 'Performance'],
-      people: {
-        crew: ['Soli Jang', 'Dongryoung Han'],
-        video: 'Hyunsung Choi',
-        photo: 'Xu Che',
-      },
+      roles: ['Installation', 'Performance'],
+      productions: [{ role: 'Sound Assistant', names: ['Dongryoung Han'] }],
+      photo: 'Xu Che',
       schedule: [
         {
           date: '19, 20, 21 July 2024',
@@ -31,17 +28,17 @@ export const WORKS_DATA: WORKS_DATA = {
       content: [
         '„Denying the Dragon“ has been unfolded from a myth where the dragon is forgotten or denied, transforming it into a narrative about the shared experiences of female artists through categorys of migration, ritual, personal space, and their identity. Through performances and live music that serve as a form of connecting different cultures and blurring boundaries, create new shape of dragons without gender, class, race and with a spiritual essence, have created utopian, imaginary beings without religious affiliations.',
       ],
-      role: ['Performance'],
-      people: {
-        crew: [
-          'Hyeonsu Jung',
-          'Siwei Li',
-          'Soli Jang',
-          'Lara Duymus',
-          'Raimonda Žiūkaitė',
-        ],
-        photo: 'Helena Zaida',
-      },
+      roles: ['Performance'],
+      productions: [
+        { role: 'Concept', names: ['Hyeonsu Jung'] },
+        { role: 'Direction', names: ['Hyeonsu Jung'] },
+        { role: 'Stage', names: ['Hyeonsu Jung'] },
+        { role: 'Costume', names: ['Lara Duymus'] },
+        { role: 'Mask', names: ['Lara Duymus'] },
+        { role: 'Music Composition', names: ['Raimonda Žiūkaitė'] },
+      ],
+      performers: [{ role: 'Performance', names: ['Siwei Li'] }],
+      photo: 'Helena Zaida',
       schedule: [
         {
           date: '16, 17 February 2024',
@@ -55,12 +52,9 @@ export const WORKS_DATA: WORKS_DATA = {
       summary: 'What is embodied in me?',
       category: 'performance, artwork',
       content: ['Bachelor graduation work'],
-      role: ['Installation', 'Performance'],
-      people: {
-        crew: ['Soli Jang', 'Dongryoung Han'],
-        video: 'Hyunsung Choi',
-        photo: 'Xu Che',
-      },
+      roles: ['Installation', 'Performance'],
+      productions: [{ role: 'Sound Assistant', names: ['Dongryoung Han'] }],
+      photo: 'Xu Che',
       schedule: [
         {
           date: '19, 20, 21 July 2024',
@@ -76,23 +70,28 @@ export const WORKS_DATA: WORKS_DATA = {
       content: [
         'Part of the Room to expand Festival - UdK. A performance about the process of creating connections between human and non-human beings.',
       ],
-      role: ['Set Design', 'Performance'],
-      people: {
-        crew: [
-          'Julia',
-          'Lea',
-          'Anastasia',
-          'Cécile',
-          'Ash',
-          'Lea Lenk',
-          'Ash Spit',
-          'Julia Kafizova',
-          'Soli Jang',
-          'Cécile Boos',
-          'Anastasia Putsykina',
-        ],
-        photo: 'Helena Zaida',
-      },
+      roles: ['Set Design', 'Performance'],
+      productions: [
+        { role: 'Art Vision', names: ['Julia'] },
+        { role: 'Video Installation', names: ['Lea'] },
+        { role: 'Sound Installation', names: ['Anastasia'] },
+        { role: 'Light Installation', names: ['Cécile'] },
+        { role: 'Costume', names: ['Ash'] },
+        { role: 'Sculpture', names: ['Ash'] },
+      ],
+      performers: [
+        {
+          role: 'Performance',
+          names: [
+            'Lea Lenk',
+            'Ash Spit',
+            'Julia Kafizova',
+            'Cécile Boos',
+            'Anastasia Putsykina',
+          ],
+        },
+      ],
+      photo: 'Helena Zaida',
       schedule: [
         {
           date: '16 February 2024',
@@ -112,23 +111,28 @@ export const WORKS_DATA: WORKS_DATA = {
         'Part of the Room to expand Festival - UdK.',
         'A performance about the process of creating connections between human and non-human beings.',
       ],
-      role: ['Set Design', 'Performance'],
-      people: {
-        crew: [
-          'Julia',
-          'Lea',
-          'Anastasia',
-          'Cécile',
-          'Ash',
-          'Lea Lenk',
-          'Ash Spit',
-          'Julia Kafizova',
-          'Soli Jang',
-          'Cécile Boos',
-          'Anastasia Putsykina',
-        ],
-        photo: 'Helena Zaida',
-      },
+      roles: ['Set Design', 'Performance'],
+      productions: [
+        { role: 'Art Vision', names: ['Julia'] },
+        { role: 'Video Installation', names: ['Lea'] },
+        { role: 'Sound Installation', names: ['Anastasia'] },
+        { role: 'Light Installation', names: ['Cécile'] },
+        { role: 'Costume', names: ['Ash'] },
+        { role: 'Sculpture', names: ['Ash'] },
+      ],
+      performers: [
+        {
+          role: 'Performance',
+          names: [
+            'Lea Lenk',
+            'Ash Spit',
+            'Julia Kafizova',
+            'Cécile Boos',
+            'Anastasia Putsykina',
+          ],
+        },
+      ],
+      photo: 'Helena Zaida',
       schedule: [
         {
           date: '16 February 2024',
@@ -144,22 +148,21 @@ export const WORKS_DATA: WORKS_DATA = {
       content: [
         '"Digital Nomad" is a piece that was inspired by the stories of digital nomads, individuals who work remotely while globetrotting to UNESCO locations. The narrative-driven choreography explored the desires and challenges of these people, offering a portrayal of their way of life through movement and music.',
       ],
-      role: ['Stage design'],
-      people: {
-        crew: [
-          'Holger Benedict Seidelin',
-          'Raimonda Žiūkaitė',
-          'Tamae Yoneda',
-          'Hannah Stein',
-          'Fotis Charonis',
-          'Soli Jang',
-          'Lucia Leibnitz',
-          'Joana Pratschke',
-          'Vincent Carter',
-        ],
-        video: 'Holger Benedict Seidelin',
-        photo: 'Minjoo Yoo',
-      },
+      roles: ['Stage design'],
+      productions: [
+        { role: 'Choreography', names: ['Holger Benedict Seidelin'] },
+        { role: 'Composer', names: ['Raimonda Žiūkaitė'] },
+        { role: 'Costumes', names: ['Lucia Leibnitz'] },
+        { role: 'Video', names: ['Holger Benedict Seidelin'] },
+        { role: 'Animations', names: ['Joana Pratschke', 'Vincent Carter'] },
+      ],
+      performers: [
+        {
+          role: 'Performance',
+          names: ['Tamae Yoneda', 'Hannah Stein', 'Fotis Charonis'],
+        },
+      ],
+      photo: 'Minjoo Yoo',
       schedule: [
         {
           date: '10, 11 November 2023',
@@ -177,32 +180,36 @@ export const WORKS_DATA: WORKS_DATA = {
         'Werkstattinszenierung unter Verwendung von Auszügen aus ALLES CASUAL von Elisabeth Pape.',
         'Ein Projekt des Studiengangs Musical/Show in Kooperation mit den Studiengängen Bühnen-und Kostümbild.',
       ],
-      role: ['Bühnenbild'],
-      people: {
-        crew: [
-          'Tatonka-Danae Brunner',
-          'Johanna Eid',
-          'Charlotte Fischer',
-          'Olivia Goga',
-          'Teresa Hank-Gómez',
-          'Lara Korner',
-          'Samantha Mayer',
-          'Melina Niccum',
-          'Insa Ommen',
-          'Alicia Reuß',
-          'Mathias Noack',
-          'Damian Omansen',
-          'Bart de Clercq',
-          'Lara Duymus',
-          'Jeanot Kempf',
-          'Soli Jang',
-          'Miriam Damm',
-          'Tobias Blinzler',
-          'Anastasia Troska',
-          'Karla Romero Vargas',
-        ],
-        photo: 'Daniel Nartschick',
-      },
+      roles: ['Bühnenbild'],
+      productions: [
+        { role: 'Inszenierung', names: ['Mathias Noack'] },
+        { role: 'Musikalische Leitung', names: ['Damian Omansen'] },
+        { role: 'Choreographie', names: ['Bart de Clercq'] },
+        { role: 'Kostüme', names: ['Lara Duymus'] },
+        { role: 'Bühne', names: ['Jeanot Kempf'] },
+        { role: 'Licht', names: ['Miriam Damm'] },
+        { role: 'Regieassistenz', names: ['Tobias Blinzler'] },
+        { role: 'Choreographische Assistenz', names: ['Anastasia Troska'] },
+        { role: 'Maske', names: ['Karla Romero Vargas'] },
+      ],
+      performers: [
+        {
+          role: 'Schauspielerinnen',
+          names: [
+            'Tatonka-Danae Brunner',
+            'Johanna Eid',
+            'Charlotte Fischer',
+            'Olivia Goga',
+            'Teresa Hank-Gómez',
+            'Lara Korner',
+            'Samantha Mayer',
+            'Melina Niccum',
+            'Insa Ommen',
+            'Alicia Reuß',
+          ],
+        },
+      ],
+      photo: 'Daniel Nartschick',
       schedule: [
         {
           date: '10, 11, 12, 17, 18, 19 May 2024',
@@ -219,37 +226,38 @@ export const WORKS_DATA: WORKS_DATA = {
         'Produktionsfirmen.',
         'Deutsche Film- und Fernsehakademie Berlin (DFFB).',
       ],
-      role: ['Production Design(Szenenbild)'],
-      people: {
-        regie: ['Antonia Walther'],
-        schauspieler: [
-          'Rahel Savoldelli',
-          'Frederik von Lüttichau',
-          'Josephine Schumann',
-          'Tomas Kutinjač',
-          'Ares Kloß',
-          'Alma Löhr',
-          'Smilla Löh',
-          'Sina Seiler',
-          'Sylvia Schwarz',
-        ],
-        crew: [
-          'Hannah Marie Lorenz',
-          'Sven Krause',
-          'Kevin Laminit',
-          'Sven Krause',
-          'Soli Jang',
-          'Geoffrey LaRue',
-          'Janga Berk',
-          'Sven Krause',
-          'Antonia Walther',
-          'Kilian Zillessen',
-          'Anouk Lünterbusch',
-          'Sven Krause',
-          'Chun Mei Tan',
-          'Kevin Mehmke',
-        ],
-      },
+      roles: ['Production Design'],
+      productions: [
+        { role: 'Regisseurin', names: ['Antonia Walther'] },
+        { role: '1. Regieassistent', names: ['Kilian Zillessen'] },
+        { role: '1. Filmtonassistentin', names: ['Anouk Lünterbusch'] },
+        { role: '2. Kameraassistentin', names: ['Hannah Marie Lorenz'] },
+        { role: 'Kostüm', names: ['Sven Krause'] },
+        { role: 'Maske', names: ['Kevin Laminit'] },
+        { role: 'Requisitenfahrer', names: ['Sven Krause'] },
+        { role: 'Szenenbild', names: ['Geoffrey LaRue'] },
+        { role: 'Setaufnahmeleiterin', names: ['Janga Berk'] },
+        { role: 'Produktionsfahrer', names: ['Sven Krause'] },
+        { role: 'Caterer (Setkoch)', names: ['Sven Krause'] },
+        { role: 'Intimacy Coordinator', names: ['Chun Mei Tan'] },
+        { role: 'Set Medic', names: ['Kevin Mehmke'] },
+      ],
+      performers: [
+        {
+          role: 'Schauspieler*in',
+          names: [
+            'Rahel Savoldelli',
+            'Frederik von Lüttichau',
+            'Josephine Schumann',
+            'Tomas Kutinjač',
+            'Ares Kloß',
+            'Alma Löhr',
+            'Smilla Löh',
+            'Sina Seiler',
+            'Sylvia Schwarz',
+          ],
+        },
+      ],
       schedule: [
         {
           date: '18 August 2023 - 31 August 2023',
@@ -265,24 +273,30 @@ export const WORKS_DATA: WORKS_DATA = {
       content: [
         'WUW is an abbreviation for WIND UND WAND (WIND AND WALL) and describes a 30-minute dance performance for young audiences aged 10+. The metaphors of the wind and the wall symbolize the ambivalent relationship between children and their parents and the gap between their wishes and reality. They also stand for intertwined thoughts and emotions and unclear interim periods. No longer a child and not yet a teenager - The time before puberty is both a formative and challenging phase. At the same time, it is a playful journey with many surprises, adventures, parties and unexpected transformations. The wind has a very flexible quality: it can be a violent storm or a gentle, pleasant breeze, and it can quickly change its mood – just like young people. Inspired by how the wind changes shape, ZINADA explores creative ways to overcome walls in WUW. During the rehearsal and development phase of the piece, the artists conducted interviews with the target group and held workshops on topics that concern children of this age group. The work with the target group was not just inspiring but also integral to the development of the movement material.',
       ],
-      role: ['Costumes', 'Wall Design'],
-      people: {
-        crew: [
-          'Jin Lee',
-          'ZINADA (Jin Lee & Jihun Choi)',
-          'Benny Omerzell',
-          'Soli Jang',
-          'Jihun Choi',
-        ],
-        production: [
-          'Fokus Tanz in cooperation with HochX Theater und Live Art, München',
-        ],
-        photo: 'Christina Gerg',
-      },
+      roles: ['Costumes', 'Wall Design'],
+      productions: [
+        { role: 'Concept', names: ['Jin Lee'] },
+        { role: 'Music', names: ['Benny Omerzell'] },
+        { role: 'Costumes', names: ['Jihun Choi'] },
+        { role: 'Wall design', names: ['Jihun Choi'] },
+        {
+          role: 'Production',
+          names: [
+            'Fokus Tanz in cooperation with HochX Theater und Live Art, München',
+          ],
+        },
+      ],
+      performers: [
+        {
+          role: 'Choreography, Performance',
+          names: ['ZINADA (Jin Lee & Jihun Choi)'],
+        },
+      ],
+      photo: 'Christina Gerg',
       schedule: [
         {
           date: '22, 23 October 2024',
-          location: 'Dante-Gymnasium and Klenze-Gymnasium in Munich',
+          location: 'Dante-Gymnasium & Klenze-Gymnasium in Munich',
         },
         {
           date: '17, 18 January 2025',
@@ -321,19 +335,23 @@ export const WORKS_DATA: WORKS_DATA = {
       content: [
         'HUABUN ("potted plant" in Korean) is a 40-minute performance that deals with the unfamiliarity of time and space. It establishes connections between people and plants and the constant encounter with a different environment. HUABUN explores a movement language inspired by plants that scan their surroundings with 20 senses. ZINADA transforms their experience of relocation into a poetic performance.',
       ],
-      role: ['Costume'],
-      people: {
-        crew: [
-          'ZINADA (Jin Lee & Jihun Choi)',
-          'Jin Lee',
-          'Benny Omerzell',
-          'Jin Young Won',
-          'Rainer Ludwig',
-          'Soli Jang',
-          'Laura Manz',
-          'Simone Lutz',
-        ],
-      },
+      roles: ['Costume'],
+      productions: [
+        {
+          role: 'Concept',
+          names: ['ZINADA (Jin Lee & Jihun Choi)'],
+        },
+        {
+          role: 'Choreography',
+          names: ['ZINADA (Jin Lee & Jihun Choi)'],
+        },
+        { role: 'Music', names: ['Benny Omerzell'] },
+        { role: 'Dramaturgy', names: ['Jin Young Won'] },
+        { role: 'Light Design', names: ['Rainer Ludwig'] },
+        { role: 'Production Management', names: ['Laura Manz'] },
+        { role: 'PR', names: ['Simone Lutz'] },
+      ],
+      performers: [{ role: 'Performance', names: ['Jin Lee'] }],
       schedule: [
         {
           date: '30 March, 01 April 2023',
@@ -349,24 +367,30 @@ export const WORKS_DATA: WORKS_DATA = {
       content: [
         'WUW is an abbreviation for WIND UND WAND (WIND AND WALL) and describes a 30-minute dance performance for young audiences aged 10+. The metaphors of the wind and the wall symbolize the ambivalent relationship between children and their parents and the gap between their wishes and reality. They also stand for intertwined thoughts and emotions and unclear interim periods. No longer a child and not yet a teenager - The time before puberty is both a formative and challenging phase. At the same time, it is a playful journey with many surprises, adventures, parties and unexpected transformations. The wind has a very flexible quality: it can be a violent storm or a gentle, pleasant breeze, and it can quickly change its mood – just like young people. Inspired by how the wind changes shape, ZINADA explores creative ways to overcome walls in WUW. During the rehearsal and development phase of the piece, the artists conducted interviews with the target group and held workshops on topics that concern children of this age group. The work with the target group was not just inspiring but also integral to the development of the movement material.',
       ],
-      role: ['Costumes', 'Wall Design'],
-      people: {
-        crew: [
-          'Jin Lee',
-          'ZINADA (Jin Lee & Jihun Choi)',
-          'Benny Omerzell',
-          'Soli Jang',
-          'Jihun Choi',
-        ],
-        production: [
-          'Fokus Tanz in cooperation with HochX Theater und Live Art, München',
-        ],
-        photo: 'Christina Gerg',
-      },
+      roles: ['Costumes', 'Wall Design'],
+      productions: [
+        { role: 'Concept', names: ['Jin Lee'] },
+        { role: 'Music', names: ['Benny Omerzell'] },
+        { role: 'Costumes', names: ['Jihun Choi'] },
+        { role: 'Wall design', names: ['Jihun Choi'] },
+        {
+          role: 'Production',
+          names: [
+            'Fokus Tanz in cooperation with HochX Theater und Live Art, München',
+          ],
+        },
+      ],
+      performers: [
+        {
+          role: 'Choreography, Performance',
+          names: ['ZINADA (Jin Lee & Jihun Choi)'],
+        },
+      ],
+      photo: 'Christina Gerg',
       schedule: [
         {
           date: '22, 23 October 2024',
-          location: 'Dante-Gymnasium and Klenze-Gymnasium in Munich',
+          location: 'Dante-Gymnasium & Klenze-Gymnasium in Munich',
         },
         {
           date: '17, 18 January 2025',
