@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 export default function StageCostume() {
   const { stage, costume } = WORKS_DATA;
 
-  const combinedWorksData: WORKS_DATA_INNER[] = [...costume, ...stage];
+  const combinedWorksData: WORKS_DATA_INNER[] = [...stage, ...costume];
   const stageCostumeData = editWorksData(combinedWorksData);
 
   return (

@@ -110,6 +110,8 @@
   @include m {
     width: 100%;
     max-width: 500px;
+
+    border-bottom: 0px;
   }
 }
 
@@ -153,7 +155,7 @@
     text-align: end;
 
     @include m {
-      max-width: 160px;
+      max-width: 180px;
     }
   }
 

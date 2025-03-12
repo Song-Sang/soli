@@ -37,7 +37,9 @@ export default function People({ workData, onClick }: PeoPleProps) {
               {workData?.productions.map((production, index) => (
                 <div key={index} className={cx('crew-item')}>
                   <p className={cx('detail')}>{production.role}</p>
-                  <p className={cx('detail', 'crew')}>{production.names}</p>
+                  <p className={cx('detail', 'crew')}>
+                    {production.names.join(' • ')}
+                  </p>
                 </div>
               ))}
             </div>
