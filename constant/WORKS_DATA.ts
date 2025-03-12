@@ -22,6 +22,22 @@ export const WORKS_DATA: WORKS_DATA = {
 
   performance: [
     {
+      title: 'Embodied',
+      summary: 'What is embodied in me?',
+      category: 'performance, artwork',
+      content: ['Bachelor graduation work'],
+      roles: ['Installation', 'Performance'],
+      productions: [{ role: 'Sound Assistant', names: ['Dongryoung Han'] }],
+      photo: 'Xu Che',
+      schedule: [
+        {
+          date: '19, 20, 21 July 2024',
+          location: 'Universität der Künste Berlin, Berlin',
+        },
+      ],
+      images: IMAGES_DATA.Embodied,
+    },
+    {
       title: 'Denying the Dragon',
       summary: 'Create new shape of dragons.',
       category: 'performance',
@@ -37,7 +53,7 @@ export const WORKS_DATA: WORKS_DATA = {
         { role: 'Mask', names: ['Lara Duymus'] },
         { role: 'Music Composition', names: ['Raimonda Žiūkaitė'] },
       ],
-      performers: [{ role: 'Performance', names: ['Siwei Li'] }],
+      performers: [{ role: 'Performance', names: ['Siwei Li', 'Soli Jang'] }],
       photo: 'Helena Zaida',
       schedule: [
         {
@@ -46,22 +62,6 @@ export const WORKS_DATA: WORKS_DATA = {
         },
       ],
       images: IMAGES_DATA.DenyingTheDragon,
-    },
-    {
-      title: 'Embodied',
-      summary: 'What is embodied in me?',
-      category: 'performance, artwork',
-      content: ['Bachelor graduation work'],
-      roles: ['Installation', 'Performance'],
-      productions: [{ role: 'Sound Assistant', names: ['Dongryoung Han'] }],
-      photo: 'Xu Che',
-      schedule: [
-        {
-          date: '19, 20, 21 July 2024',
-          location: 'Universität der Künste Berlin, Berlin',
-        },
-      ],
-      images: IMAGES_DATA.Embodied,
     },
     {
       title: 'Forest love : Meeting once',
@@ -88,6 +88,7 @@ export const WORKS_DATA: WORKS_DATA = {
             'Julia Kafizova',
             'Cécile Boos',
             'Anastasia Putsykina',
+            'Soli Jang',
           ],
         },
       ],
@@ -103,6 +104,112 @@ export const WORKS_DATA: WORKS_DATA = {
   ],
 
   stage: [
+    {
+      title: 'WUW',
+      summary: 'WIND UND WAND',
+      category: 'costume, stage',
+      content: [
+        'WUW is an abbreviation for WIND UND WAND (WIND AND WALL) and describes a 30-minute dance performance for young audiences aged 10+. The metaphors of the wind and the wall symbolize the ambivalent relationship between children and their parents and the gap between their wishes and reality. They also stand for intertwined thoughts and emotions and unclear interim periods. No longer a child and not yet a teenager - The time before puberty is both a formative and challenging phase. At the same time, it is a playful journey with many surprises, adventures, parties and unexpected transformations. The wind has a very flexible quality: it can be a violent storm or a gentle, pleasant breeze, and it can quickly change its mood – just like young people. Inspired by how the wind changes shape, ZINADA explores creative ways to overcome walls in WUW. During the rehearsal and development phase of the piece, the artists conducted interviews with the target group and held workshops on topics that concern children of this age group. The work with the target group was not just inspiring but also integral to the development of the movement material.',
+      ],
+      roles: ['Costumes', 'Wall Design'],
+      productions: [
+        { role: 'Concept', names: ['Jin Lee'] },
+        { role: 'Music', names: ['Benny Omerzell'] },
+        { role: 'Costumes', names: ['Jihun Choi', 'Soli Jang'] },
+        { role: 'Wall design', names: ['Jihun Choi', 'Soli Jang'] },
+        {
+          role: 'Production',
+          names: [
+            'Fokus Tanz in cooperation with HochX Theater und Live Art, München',
+          ],
+        },
+      ],
+      performers: [
+        {
+          role: 'Choreography, Performance',
+          names: ['ZINADA (Jin Lee & Jihun Choi)'],
+        },
+      ],
+      photo: 'Christina Gerg',
+      schedule: [
+        {
+          date: '22, 23 October 2024',
+          location: 'Dante-Gymnasium & Klenze-Gymnasium in Munich',
+        },
+        {
+          date: '17, 18 January 2025',
+          location: 'Hochx Theater & Live music, Munich, Germany',
+        },
+        {
+          date: '17, 19 November 2024',
+          location: 'Fabrik Potsdam, Potsdam',
+        },
+        {
+          date: '18, 19 January 2025',
+          location: 'HochX Theater, Munich',
+        },
+        {
+          date: '09, 11 April 2025',
+          location: 'K3 Hamburg, Hamburg',
+        },
+        {
+          date: '15, 17 May 2025',
+          location: 'Potsdamer Tanztage, Potsdam',
+        },
+        {
+          date: '17, 18 June 2025',
+          location: 'Hellerau, Dresden',
+        },
+      ],
+      images: IMAGES_DATA.WUW,
+    },
+    {
+      title: 'Musical 21:58',
+      summary:
+        '21:53 - Zu früh um schlafen zu gehen, zu spät um wen anzurufen.',
+      category: 'stage',
+      content: [
+        'Werkstattinszenierung unter Verwendung von Auszügen aus ALLES CASUAL von Elisabeth Pape.',
+        'Ein Projekt des Studiengangs Musical/Show in Kooperation mit den Studiengängen Bühnen-und Kostümbild.',
+      ],
+      roles: ['Bühne'],
+      productions: [
+        { role: 'Inszenierung', names: ['Mathias Noack'] },
+        { role: 'Musikalische Leitung', names: ['Damian Omansen'] },
+        { role: 'Choreographie', names: ['Bart de Clercq'] },
+        { role: 'Kostüme', names: ['Lara Duymus'] },
+        { role: 'Bühne', names: ['Jeanot Kempf', 'Soli Jang'] },
+        { role: 'Licht', names: ['Miriam Damm'] },
+        { role: 'Regieassistenz', names: ['Tobias Blinzler'] },
+        { role: 'Choreographische Assistenz', names: ['Anastasia Troska'] },
+        { role: 'Maske', names: ['Karla Romero Vargas'] },
+      ],
+      performers: [
+        {
+          role: 'Schauspielerinnen',
+          names: [
+            'Tatonka-Danae Brunner',
+            'Johanna Eid',
+            'Charlotte Fischer',
+            'Olivia Goga',
+            'Teresa Hank-Gómez',
+            'Lara Korner',
+            'Samantha Mayer',
+            'Melina Niccum',
+            'Insa Ommen',
+            'Alicia Reuß',
+          ],
+        },
+      ],
+      photo: 'Daniel Nartschick',
+      schedule: [
+        {
+          date: '10, 11, 12, 17, 18, 19 May 2024',
+          location: 'UNI.T Theater, Berlin',
+        },
+      ],
+      images: IMAGES_DATA['Musical 21:58'],
+    },
     {
       title: 'Forest love : Meeting once',
       summary: 'How and where can we connect?',
@@ -129,6 +236,7 @@ export const WORKS_DATA: WORKS_DATA = {
             'Julia Kafizova',
             'Cécile Boos',
             'Anastasia Putsykina',
+            'Soli Jang',
           ],
         },
       ],
@@ -171,53 +279,7 @@ export const WORKS_DATA: WORKS_DATA = {
       ],
       images: IMAGES_DATA.DigitalNomads,
     },
-    {
-      title: 'Musical 21:58',
-      summary:
-        '21:53 - Zu früh um schlafen zu gehen, zu spät um wen anzurufen.',
-      category: 'stage',
-      content: [
-        'Werkstattinszenierung unter Verwendung von Auszügen aus ALLES CASUAL von Elisabeth Pape.',
-        'Ein Projekt des Studiengangs Musical/Show in Kooperation mit den Studiengängen Bühnen-und Kostümbild.',
-      ],
-      roles: ['Bühnenbild'],
-      productions: [
-        { role: 'Inszenierung', names: ['Mathias Noack'] },
-        { role: 'Musikalische Leitung', names: ['Damian Omansen'] },
-        { role: 'Choreographie', names: ['Bart de Clercq'] },
-        { role: 'Kostüme', names: ['Lara Duymus'] },
-        { role: 'Bühne', names: ['Jeanot Kempf'] },
-        { role: 'Licht', names: ['Miriam Damm'] },
-        { role: 'Regieassistenz', names: ['Tobias Blinzler'] },
-        { role: 'Choreographische Assistenz', names: ['Anastasia Troska'] },
-        { role: 'Maske', names: ['Karla Romero Vargas'] },
-      ],
-      performers: [
-        {
-          role: 'Schauspielerinnen',
-          names: [
-            'Tatonka-Danae Brunner',
-            'Johanna Eid',
-            'Charlotte Fischer',
-            'Olivia Goga',
-            'Teresa Hank-Gómez',
-            'Lara Korner',
-            'Samantha Mayer',
-            'Melina Niccum',
-            'Insa Ommen',
-            'Alicia Reuß',
-          ],
-        },
-      ],
-      photo: 'Daniel Nartschick',
-      schedule: [
-        {
-          date: '10, 11, 12, 17, 18, 19 May 2024',
-          location: 'UNI.T Theater, Berlin',
-        },
-      ],
-      images: IMAGES_DATA['Musical 21:58'],
-    },
+
     {
       title: 'The Rich Family',
       summary: 'Was macht einen tollen Sommer aus?',
@@ -226,7 +288,7 @@ export const WORKS_DATA: WORKS_DATA = {
         'Produktionsfirmen.',
         'Deutsche Film- und Fernsehakademie Berlin (DFFB).',
       ],
-      roles: ['Production Design'],
+      roles: ['Set Design'],
       productions: [
         { role: 'Regisseurin', names: ['Antonia Walther'] },
         { role: '1. Regieassistent', names: ['Kilian Zillessen'] },
@@ -235,7 +297,7 @@ export const WORKS_DATA: WORKS_DATA = {
         { role: 'Kostüm', names: ['Sven Krause'] },
         { role: 'Maske', names: ['Kevin Laminit'] },
         { role: 'Requisitenfahrer', names: ['Sven Krause'] },
-        { role: 'Szenenbild', names: ['Geoffrey LaRue'] },
+        { role: 'Szenenbild', names: ['Geoffrey LaRue', 'Soli Jang'] },
         { role: 'Setaufnahmeleiterin', names: ['Janga Berk'] },
         { role: 'Produktionsfahrer', names: ['Sven Krause'] },
         { role: 'Caterer (Setkoch)', names: ['Sven Krause'] },
@@ -266,6 +328,9 @@ export const WORKS_DATA: WORKS_DATA = {
       ],
       images: IMAGES_DATA.RichFamily,
     },
+  ],
+
+  costume: [
     {
       title: 'WUW',
       summary: 'WIND UND WAND',
@@ -277,8 +342,8 @@ export const WORKS_DATA: WORKS_DATA = {
       productions: [
         { role: 'Concept', names: ['Jin Lee'] },
         { role: 'Music', names: ['Benny Omerzell'] },
-        { role: 'Costumes', names: ['Jihun Choi'] },
-        { role: 'Wall design', names: ['Jihun Choi'] },
+        { role: 'Costumes', names: ['Jihun Choi', 'Soli Jang'] },
+        { role: 'Wall design', names: ['Jihun Choi', 'Soli Jang'] },
         {
           role: 'Production',
           names: [
@@ -325,9 +390,6 @@ export const WORKS_DATA: WORKS_DATA = {
       ],
       images: IMAGES_DATA.WUW,
     },
-  ],
-
-  costume: [
     {
       title: 'HUABUN',
       summary: '"Potted plant" in Korean.',
@@ -359,65 +421,6 @@ export const WORKS_DATA: WORKS_DATA = {
         },
       ],
       images: IMAGES_DATA.Huabun,
-    },
-    {
-      title: 'WUW',
-      summary: 'WIND UND WAND',
-      category: 'costume, stage',
-      content: [
-        'WUW is an abbreviation for WIND UND WAND (WIND AND WALL) and describes a 30-minute dance performance for young audiences aged 10+. The metaphors of the wind and the wall symbolize the ambivalent relationship between children and their parents and the gap between their wishes and reality. They also stand for intertwined thoughts and emotions and unclear interim periods. No longer a child and not yet a teenager - The time before puberty is both a formative and challenging phase. At the same time, it is a playful journey with many surprises, adventures, parties and unexpected transformations. The wind has a very flexible quality: it can be a violent storm or a gentle, pleasant breeze, and it can quickly change its mood – just like young people. Inspired by how the wind changes shape, ZINADA explores creative ways to overcome walls in WUW. During the rehearsal and development phase of the piece, the artists conducted interviews with the target group and held workshops on topics that concern children of this age group. The work with the target group was not just inspiring but also integral to the development of the movement material.',
-      ],
-      roles: ['Costumes', 'Wall Design'],
-      productions: [
-        { role: 'Concept', names: ['Jin Lee'] },
-        { role: 'Music', names: ['Benny Omerzell'] },
-        { role: 'Costumes', names: ['Jihun Choi'] },
-        { role: 'Wall design', names: ['Jihun Choi'] },
-        {
-          role: 'Production',
-          names: [
-            'Fokus Tanz in cooperation with HochX Theater und Live Art, München',
-          ],
-        },
-      ],
-      performers: [
-        {
-          role: 'Choreography, Performance',
-          names: ['ZINADA (Jin Lee & Jihun Choi)'],
-        },
-      ],
-      photo: 'Christina Gerg',
-      schedule: [
-        {
-          date: '22, 23 October 2024',
-          location: 'Dante-Gymnasium & Klenze-Gymnasium in Munich',
-        },
-        {
-          date: '17, 18 January 2025',
-          location: 'Hochx Theater & Live music, Munich, Germany',
-        },
-        {
-          date: '17, 19 November 2024',
-          location: 'Fabrik Potsdam, Potsdam',
-        },
-        {
-          date: '18, 19 January 2025',
-          location: 'HochX Theater, Munich',
-        },
-        {
-          date: '09, 11 April 2025',
-          location: 'K3 Hamburg, Hamburg',
-        },
-        {
-          date: '15, 17 May 2025',
-          location: 'Potsdamer Tanztage, Potsdam',
-        },
-        {
-          date: '17, 18 June 2025',
-          location: 'Hellerau, Dresden',
-        },
-      ],
-      images: IMAGES_DATA.WUW,
     },
   ],
 };
