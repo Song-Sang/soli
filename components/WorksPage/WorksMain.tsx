@@ -1,6 +1,5 @@
 import styles from './WorksMain.module.scss';
 import classNames from 'classnames/bind';
-import { useState } from 'react';
 import ArtworkPerformance from './MainTopic/ArtworkPerformance';
 import StageCostume from './MainTopic/StageCostume';
 import Image from 'next/image';
