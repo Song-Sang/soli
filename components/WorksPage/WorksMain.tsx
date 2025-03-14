@@ -9,6 +9,7 @@ import NavBar from '../NavBar/NavBar';
 import Lottie from 'react-lottie-player';
 import swipeLottie from '@/public/lottie/swipe.json';
 import { useProjectScroll } from '../../utils/useProjectScroll';
+import { useSlideStore } from '../../store/useProjectsStore';
 
 const cx = classNames.bind(styles);
 
@@ -53,7 +54,7 @@ function PrevArrow({ onClick }: ArrowProps) {
 }
 
 export default function WorksMain() {
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const { currentSlide, setCurrentSlide } = useSlideStore();
   const { slideRefs, hasScroll, endScroll } = useProjectScroll(currentSlide);
 
   const handleNext = () => {
