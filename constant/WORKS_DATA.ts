@@ -164,7 +164,7 @@ export const WORKS_DATA: WORKS_DATA = {
       images: IMAGES_DATA.WUW,
     },
     {
-      title: 'Musical 21:53',
+      title: 'Musical 21:58',
       summary:
         '21:53 - Zu früh um schlafen zu gehen, zu spät um wen anzurufen.',
       category: 'stage',
@@ -208,7 +208,7 @@ export const WORKS_DATA: WORKS_DATA = {
           location: 'UNI.T Theater, Berlin',
         },
       ],
-      images: IMAGES_DATA['Musical 21:53'],
+      images: IMAGES_DATA['Musical 21:58'],
     },
     {
       title: 'Forest love : Meeting once',
