@@ -70,6 +70,17 @@
   width: 120px;
   height: auto;
 
+  opacity: 1;
+  transition: opacity 1s ease;
+
+  &.mobile {
+    opacity: 0;
+
+    &.able {
+      opacity: 1;
+    }
+  }
+
   @include xl {
     width: 110px;
   }

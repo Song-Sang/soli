@@ -7,7 +7,12 @@ import LineLottie from '@/public/lottie/home-line-animation.json';
 
 const cx = classNames.bind(styles);
 
-export default function NavMenu() {
+interface NavMenuProps {
+  mobile?: boolean;
+  mobileMenuVisible?: boolean;
+}
+
+export default function NavMenu({ mobile, mobileMenuVisible }: NavMenuProps) {
   const router = useRouter();
   const { pathname } = router;
 
@@ -25,7 +30,11 @@ export default function NavMenu() {
             play={true}
             loop={false}
             animationData={LineLottie}
-            className={cx('line-lottie')}
+            className={cx(
+              'line-lottie',
+              { mobile: mobile },
+              { able: mobileMenuVisible }
+            )}
           />
         )}
       </Link>
