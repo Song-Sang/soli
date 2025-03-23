@@ -49,14 +49,14 @@ export const IMAGES_DATA = {
     `${IMAGE_URL}/Huabun/Huabun3.webp`,
   ],
 
-  'Musical 21:58': [
-    `${IMAGE_URL}/Musikal21:58/Musikal1.webp`,
-    `${IMAGE_URL}/Musikal21:58/Musikal2.webp`,
-    `${IMAGE_URL}/Musikal21:58/Musikal3.webp`,
-    `${IMAGE_URL}/Musikal21:58/Musikal4.webp`,
-    `${IMAGE_URL}/Musikal21:58/Musikal5.webp`,
-    `${IMAGE_URL}/Musikal21:58/Musikal6.webp`,
-    `${IMAGE_URL}/Musikal21:58/Musikal7.webp`,
+  'Musical 21:53': [
+    `${IMAGE_URL}/Musikal21:53/Musikal1.webp`,
+    `${IMAGE_URL}/Musikal21:53/Musikal2.webp`,
+    `${IMAGE_URL}/Musikal21:53/Musikal3.webp`,
+    `${IMAGE_URL}/Musikal21:53/Musikal4.webp`,
+    `${IMAGE_URL}/Musikal21:53/Musikal5.webp`,
+    `${IMAGE_URL}/Musikal21:53/Musikal6.webp`,
+    `${IMAGE_URL}/Musikal21:53/Musikal7.webp`,
   ],
 
   RichFamily: [
