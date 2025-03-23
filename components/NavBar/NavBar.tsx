@@ -41,7 +41,7 @@ export default function NavBar() {
         <NavMenu />
       </div>
       <div className={cx('nav-menu-mobile', { able: mobileMenuVisible })}>
-        <NavMenu />
+        <NavMenu mobile={true} mobileMenuVisible={mobileMenuVisible} />
       </div>
       <button onClick={handleMenuButton} className={cx('hamburger-lottie')}>
         <Lottie
