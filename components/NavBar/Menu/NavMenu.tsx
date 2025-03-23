@@ -48,7 +48,11 @@ export default function NavMenu({ mobile, mobileMenuVisible }: NavMenuProps) {
             play={true}
             loop={false}
             animationData={LineLottie}
-            className={cx('line-lottie')}
+            className={cx(
+              'line-lottie',
+              { mobile: mobile },
+              { able: mobileMenuVisible }
+            )}
             speed={1.5}
           />
         )}
@@ -64,7 +68,11 @@ export default function NavMenu({ mobile, mobileMenuVisible }: NavMenuProps) {
             play={true}
             loop={false}
             animationData={LineLottie}
-            className={cx('line-lottie')}
+            className={cx(
+              'line-lottie',
+              { mobile: mobile },
+              { able: mobileMenuVisible }
+            )}
           />
         )}
       </Link>
