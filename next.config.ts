@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
   },
 
   env: {
-    GA_ID: process.env.NEXT_PUBLIC_GA_ID,
+    NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
   },
 };
 
