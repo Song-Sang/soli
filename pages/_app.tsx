@@ -11,9 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>SOLI-JANG / PORTFOLIO</title>
       </Head>
-      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ? (
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
-      ) : null}
+
+      <GoogleAnalytics gaId={process.env.GA_ID!} />
+
       <Component {...pageProps} />
       <ToastContainer />
     </>
